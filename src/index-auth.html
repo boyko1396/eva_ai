@@ -1,0 +1,1367 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Auth'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header-auth.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- intro BEGIN -->
+          <section class="intro">
+            <picture class="glare glare--1 intro__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md intro__container">
+              <div class="intro__main">
+                <picture class="intro__bg">
+                  <source
+                    srcset="images/intro-hero-767.webp"
+                    type="image/webp"
+                    media="(max-width: 767px)">
+                  <source 
+                    srcset="images/intro-hero-767.jpg"
+                    media="(max-width: 767px)">
+                  <source
+                    srcset="images/intro-hero.webp"
+                    type="image/webp">
+                  <img
+                    src="images/intro-hero.jpg"
+                    alt="Eva AI умный помощник"
+                    width="1200"
+                    height="513">
+                </picture>
+                <div class="intro__content">
+                  <h1 class="intro__title"><span class="visually-hidden">Eva AI</span> умный помощник</h1>
+                  <h2 class="u-content intro__subtitle">
+                    <p>ChatGPT на русском. Быстрая генерация текста, изображений и ответов на&nbsp;ваши&nbsp;вопросы</p>
+                  </h2>
+                  <a href="chat.html" class="btn btn--size-md btn--theme-accent-fill intro__btn">
+                    <span class="btn__inner">
+                      <span class="btn__title">Начать чат</span>
+                    </span>
+                  </a>
+                </div>
+              </div>
+              <div class="intro__info">
+                <div class="row intro__info-row">
+                  <div class="row__col--4 intro__info-col">
+                    <article class="u-box u-box--theme-grey intro__info-card">
+                      <div class="info-header intro__info-card-header">
+                        <div class="info-header__inner">
+                          <div class="info-header__media">
+                            <div class="info-header__icon">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#text"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <h3 class="fs-4 info-header__title">Тексты</h3>
+                        </div>
+                      </div>
+                      <div class="u-content intro__info-card-text">
+                        <p>Создавайте статьи, письма, описания продуктов и многое другое</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 intro__info-col">
+                    <article class="u-box u-box--theme-grey intro__info-card">
+                      <div class="info-header intro__info-card-header">
+                        <div class="info-header__inner">
+                          <div class="info-header__media">
+                            <div class="info-header__icon">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#picture"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <h3 class="fs-4 info-header__title">Изображения</h3>
+                        </div>
+                      </div>
+                      <div class="u-content intro__info-card-text">
+                        <p>Генерируйте изображения по вашему описанию или идее в любом стиле</p>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--4 intro__info-col">
+                    <article class="u-box u-box--theme-grey intro__info-card">
+                      <div class="info-header intro__info-card-header">
+                        <div class="info-header__inner">
+                          <div class="info-header__media">
+                            <div class="info-header__icon">
+                              <svg class="u-icon">
+                                <use xlink:href="images/icons/icons.svg#analysis"></use>
+                              </svg>
+                            </div>
+                          </div>
+                          <h3 class="fs-4 info-header__title">Анализ</h3>
+                        </div>
+                      </div>
+                      <div class="u-content intro__info-card-text">
+                        <p>Получайте ответы по любому материалу – видео на YouTube, статьи или сайты</p>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- intro END -->
+          <!-- about BEGIN -->
+          <section id="about" class="about">
+            <div class="container container--size-md about__container">
+              <h2 class="fs-1 about__title">Что умеет EVA&nbsp;AI</h2>
+              <div class="about__list">
+                <div class="about-card about__list-card">
+                  <div class="row about-card__row">
+                    <div class="row__col--6 about-card__col about-card__col--media">
+                      <picture class="about-card__media">
+                        <source
+                          srcset="images/about-card-1.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-1.jpg"
+                          alt="Тексты"
+                          width="588"
+                          height="329">
+                      </picture>
+                    </div>
+                    <div class="row__col--6 about-card__col about-card__col--content">
+                      <div class="about-card__content">
+                        <div class="u-box u-box--theme-grey about-card__header">
+                          <h3 class="about-card__header-title">Тексты</h3>
+                          <div class="u-content about-card__header-text">
+                            <p>Создавайте тексты любой сложности и тематики за&nbsp;считанные секунды. От статей и эссе до сценариев и писем</p>
+                          </div>
+                        </div>
+                        <div class="about-card__info">
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#text"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Контент-план</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#text"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Рефераты</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#text"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Сценарии</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#text"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Идеи</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#text"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Слоганы</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#text"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Скрипты</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-card about__list-card">
+                  <div class="row about-card__row">
+                    <div class="row__col--6 about-card__col about-card__col--media">
+                      <picture class="about-card__media">
+                        <source
+                          srcset="images/about-card-2.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-2.jpg"
+                          alt="Изображения"
+                          width="588"
+                          height="329">
+                      </picture>
+                    </div>
+                    <div class="row__col--6 about-card__col about-card__col--content">
+                      <div class="about-card__content">
+                        <div class="u-box u-box--theme-grey about-card__header">
+                          <h3 class="about-card__header-title">Изображения</h3>
+                          <div class="u-content about-card__header-text">
+                            <p>Создавайте уникальные изображения по вашему описанию.  Идеально для блогов, презентаций и соцсетей</p>
+                          </div>
+                        </div>
+                        <div class="about-card__info">
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#picture"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Сайты</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#picture"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Презентации</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#picture"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Логотипы</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#picture"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Соцсети</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#picture"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Постеры</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#picture"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Аватарки</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-card about__list-card">
+                  <div class="row about-card__row">
+                    <div class="row__col--6 about-card__col about-card__col--media">
+                      <picture class="about-card__media">
+                        <source
+                          srcset="images/about-card-3.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-3.jpg"
+                          alt="Видео"
+                          width="588"
+                          height="329">
+                      </picture>
+                    </div>
+                    <div class="row__col--6 about-card__col about-card__col--content">
+                      <div class="about-card__content">
+                        <div class="u-box u-box--theme-grey about-card__header">
+                          <h3 class="about-card__header-title">Видео</h3>
+                          <div class="u-content about-card__header-text">
+                            <p>Вставьте ссылку на видео, чтобы получить краткий пересказ  или задать вопросы по содержанию</p>
+                          </div>
+                        </div>
+                        <div class="about-card__info">
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Лекции</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Туториалы</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Фильмы</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Влоги</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Документалки</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Сериалы</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="about-card about__list-card">
+                  <div class="row about-card__row">
+                    <div class="row__col--6 about-card__col about-card__col--media">
+                      <picture class="about-card__media">
+                        <source
+                          srcset="images/about-card-4.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-4.jpg"
+                          alt="Документы и ссылки"
+                          width="588"
+                          height="329">
+                      </picture>
+                    </div>
+                    <div class="row__col--6 about-card__col about-card__col--content">
+                      <div class="about-card__content">
+                        <div class="u-box u-box--theme-grey about-card__header">
+                          <h3 class="about-card__header-title">Документы и ссылки</h3>
+                          <div class="u-content about-card__header-text">
+                            <p>Вставьте ссылку или загрузите документ, чтобы задать вопросы  по содержанию или получить краткую выжимку</p>
+                          </div>
+                        </div>
+                        <div class="about-card__info">
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#analysis"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Публикации</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#analysis"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Брифы</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#analysis"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">ТЗ</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#analysis"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Статьи</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#analysis"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Таблицы</h3>
+                            </div>
+                          </div>
+                          <div class="info-header about-card__info-card">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#analysis"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Отчеты</h3>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- about END -->
+          <!-- target-audience BEGIN -->
+          <section id="target-audience" class="target-audience">
+            <picture class="glare glare--1 target-audience__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md target-audience__container">
+              <h2 class="fs-1 target-audience__title">Кому подходит</h2>
+              <div class="target-audience__list">
+                <div class="row target-audience__list-row">
+                  <div class="row__col--4 target-audience__list-col">
+                    <div class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media">
+                          <picture class="target-audience-card__picture">
+                            <source
+                              srcset="images/target-audience-card-1.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-1.jpg"
+                              alt="Студентам"
+                              width="186"
+                              height="120">
+                          </picture>
+                        </div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-4 target-audience-card__title">Студентам</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 target-audience__list-col">
+                    <div class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media">
+                          <picture class="target-audience-card__picture">
+                            <source
+                              srcset="images/target-audience-card-2.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-2.jpg"
+                              alt="Копирайтерам"
+                              width="186"
+                              height="120">
+                          </picture>
+                        </div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-4 target-audience-card__title">Копирайтерам</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 target-audience__list-col">
+                    <div class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media">
+                          <picture class="target-audience-card__picture">
+                            <source
+                              srcset="images/target-audience-card-3.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-3.jpg"
+                              alt="Фрилансерам"
+                              width="186"
+                              height="120">
+                          </picture>
+                        </div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-4 target-audience-card__title">Фрилансерам</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 target-audience__list-col">
+                    <div class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media">
+                          <picture class="target-audience-card__picture">
+                            <source
+                              srcset="images/target-audience-card-4.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-4.jpg"
+                              alt="Программистам"
+                              width="186"
+                              height="120">
+                          </picture>
+                        </div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-4 target-audience-card__title">Программистам</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 target-audience__list-col">
+                    <div class="target-audience-card target-audience__list-card">
+                      <div class="target-audience-card__inner">
+                        <div class="target-audience-card__media">
+                          <picture class="target-audience-card__picture">
+                            <source
+                              srcset="images/target-audience-card-5.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-5.jpg"
+                              alt="Юристам"
+                              width="186"
+                              height="120">
+                          </picture>
+                        </div>
+                        <div class="target-audience-card__content">
+                          <h3 class="fs-4 target-audience-card__title">Юристам</h3>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="row__col--4 target-audience__list-col">
+                    <a href="chat.html" class="btn btn--size-md btn--theme-accent-fill target-audience__list-btn">
+                      <span class="btn__inner">
+                        <span class="btn__title">Начать чат</span>
+                      </span>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- target-audience END -->
+          <!-- features BEGIN -->
+          <section class="features">
+            <picture class="glare glare--1 features__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md features__container">
+              <h2 class="fs-1 features__title">Особенности<br class="d-sm-block">Eva&nbsp;AI</h2>
+              <div class="features__list">
+                <div class="row features__list-row">
+                  <div class="row__col--6 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="info-header features-card__header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#star"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Генерация креативных&nbsp;идей</h3>
+                          </div>
+                        </div>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>EVA&nbsp;AI всегда готова предложить свежие и оригинальные идеи для контента, будь то посты, сторис или рекламные кампании, помогая вдохновлять и удивлять аудиторию.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--6 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="info-header features-card__header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#graph"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Анализ актуальных&nbsp;трендов</h3>
+                          </div>
+                        </div>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>Быстрая и точная аналитика актуальных трендов и тем в социальных сетях позволяет SMM-менеджерам быть на шаг впереди конкурентов и&nbsp;адаптировать контент под интересы аудитории.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--6 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="info-header features-card__header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#settings"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Персонализация контента</h3>
+                          </div>
+                        </div>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>EVA&nbsp;AI способна адаптировать стиль и тон контента под&nbsp;конкретный&nbsp;бренд, создавая персонализированные и аутентичные сообщения, которые резонируют с аудиторией.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--6 features__list-col">
+                    <article class="features-card features__list-card">
+                      <div class="features-card__inner">
+                        <div class="info-header features-card__header">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#plus-box"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-4 info-header__title">Советы по оптимизации</h3>
+                          </div>
+                        </div>
+                        <div class="features-card__content">
+                          <div class="u-content features-card__text">
+                            <p>Полезные рекомендации по улучшению вовлеченности и охвата, включая советы по использованию хештегов, времени публикаций и&nbsp;формату контента.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- features END -->
+          <!-- how-works BEGIN -->
+          <section class="how-works">
+            <picture class="glare glare--1 how-works__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md how-works__container">
+              <h2 class="fs-1 how-works__title">Как это работает</h2>
+              <div class="how-works__list">
+                <div class="row how-works__list-row">
+                  <div class="row__col--3 how-works__list-col">
+                    <article class="how-works-card how-works__list-card">
+                      <div class="how-works-card__inner">
+                        <div class="how-works-card__media">
+                          <picture class="how-works-card__picture">
+                            <source
+                              srcset="images/how-works-card-1.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-1.jpg"
+                              alt="Зарегистрируйтесь и настройте профиль"
+                              width="282"
+                              height="240">
+                          </picture>
+                        </div>
+                        <div class="u-box u-box--theme-grey how-works-card__content">
+                          <h3 class="fs-4 how-works-card__title">Зарегистрируйтесь и&nbsp;настройте&nbsp;профиль</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 how-works__list-col">
+                    <article class="how-works-card how-works__list-card">
+                      <div class="how-works-card__inner">
+                        <div class="how-works-card__media">
+                          <picture class="how-works-card__picture">
+                            <source
+                              srcset="images/how-works-card-2.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-2.jpg"
+                              alt="Загрузите ваши данные или вставьте ссылки"
+                              width="282"
+                              height="240">
+                          </picture>
+                        </div>
+                        <div class="u-box u-box--theme-grey how-works-card__content">
+                          <h3 class="fs-4 how-works-card__title">Загрузите ваши данные или&nbsp;вставьте ссылки</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 how-works__list-col">
+                    <article class="how-works-card how-works__list-card">
+                      <div class="how-works-card__inner">
+                        <div class="how-works-card__media">
+                          <picture class="how-works-card__picture">
+                            <source
+                              srcset="images/how-works-card-3.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-3.jpg"
+                              alt="Получите результаты и рекомендации"
+                              width="282"
+                              height="240">
+                          </picture>
+                        </div>
+                        <div class="u-box u-box--theme-grey how-works-card__content">
+                          <h3 class="fs-4 how-works-card__title">Получите результаты и&nbsp;рекомендации</h3>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--3 how-works__list-col">
+                    <article class="how-works-card how-works__list-card">
+                      <div class="how-works-card__inner">
+                        <div class="how-works-card__media">
+                          <picture class="how-works-card__picture">
+                            <source
+                              srcset="images/how-works-card-4.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-4.jpg"
+                              alt="Начать чат"
+                              width="282"
+                              height="240">
+                          </picture>
+                        </div>
+                        <a href="chat.html" class="btn btn--size-md btn--theme-accent-fill how-works-card__btn">
+                          <span class="btn__inner">
+                            <span class="btn__title">Начать чат</span>
+                          </span>
+                        </a>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- how-works END -->
+          <!-- examples BEGIN -->
+          <section class="examples">
+            <picture class="d-lg-none glare glare--1 examples__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md examples__container">
+              <h2 class="fs-1 examples__title">Примеры использования</h2>
+              <div class="examples__list">
+                <article class="examples-card examples__list-card">
+                  <div class="examples-card__inner">
+                    <div class="row examples-card__row">
+                      <div class="row__col examples-card__col examples-card__col--media">
+                        <picture class="examples-card__picture">
+                          <source
+                            srcset="images/examples-card-1-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">
+                          <source 
+                            srcset="images/examples-card-1-767.jpg"
+                            media="(max-width: 767px)">
+                          <source
+                            srcset="images/examples-card-1.webp"
+                            type="image/webp">
+                          <img
+                            src="images/examples-card-1.jpg"
+                            alt="Вы можете загрузить любой файл и задать чату вопрос, связанный с ним"
+                            width="340"
+                            height="180">
+                        </picture>
+                      </div>
+                      <div class="row__col examples-card__col examples-card__col--content">
+                        <div class="u-box u-box--theme-grey examples-card__content">
+                          <header class="info-header examples-card__header">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#file-plus"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Загрузите файл</h3>
+                            </div>
+                          </header>
+                          <div class="u-content examples-card__text">
+                            <p>Вы можете загрузить любой файл и&nbsp;задать чату вопрос, связанный с ним</p>
+                          </div>
+                          <footer class="examples-card__footer">
+                            <p class="examples-card__footer-appeal">Составь текст для рекламы по&nbsp;данному ТЗ</p>
+                            <a href="chat.html" class="examples-card__footer-btn">Загрузить файл ></a>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="examples-card examples__list-card">
+                  <div class="examples-card__inner">
+                    <div class="row examples-card__row">
+                      <div class="row__col examples-card__col examples-card__col--media">
+                        <picture class="examples-card__picture">
+                          <source
+                            srcset="images/examples-card-2-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">
+                          <source 
+                            srcset="images/examples-card-2-767.jpg"
+                            media="(max-width: 767px)">
+                          <source
+                            srcset="images/examples-card-2.webp"
+                            type="image/webp">
+                          <img
+                            src="images/examples-card-2.jpg"
+                            alt="Дайте ссылку на видео и задайте ваш вопрос"
+                            width="588"
+                            height="180">
+                        </picture>
+                      </div>
+                      <div class="row__col examples-card__col examples-card__col--content">
+                        <div class="u-box u-box--theme-grey examples-card__content">
+                          <header class="info-header examples-card__header">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#video-youtube"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Видео Youtube</h3>
+                            </div>
+                          </header>
+                          <div class="u-content examples-card__text">
+                            <p>Дайте ссылку на видео и&nbsp;задайте ваш вопрос</p>
+                          </div>
+                          <footer class="examples-card__footer">
+                            <p class="examples-card__footer-appeal">Какую страну показывают в&nbsp;этом&nbsp;видео?</p>
+                            <a href="chat.html" class="examples-card__footer-btn">Спросить ></a>
+                          </footer>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="examples-card examples__list-card">
+                  <div class="examples-card__inner">
+                    <div class="row examples-card__row">
+                      <div class="row__col examples-card__col examples-card__col--media">
+                        <picture class="examples-card__picture">
+                          <source
+                            srcset="images/examples-card-3-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">
+                          <source 
+                            srcset="images/examples-card-3-767.jpg"
+                            media="(max-width: 767px)">
+                          <source
+                            srcset="images/examples-card-3.webp"
+                            type="image/webp">
+                          <img
+                            src="images/examples-card-3.jpg"
+                            alt="Вы можете дать ИИ ссылку и задать любой вопрос по содержанию страницы"
+                            width="340"
+                            height="180">
+                        </picture>
+                      </div>
+                      <div class="row__col examples-card__col examples-card__col--content">
+                        <div class="u-box u-box--theme-grey examples-card__content">
+                          <header class="info-header examples-card__header">
+                            <div class="info-header__inner">
+                              <div class="info-header__media">
+                                <div class="info-header__icon">
+                                  <svg class="u-icon">
+                                    <use xlink:href="images/icons/icons.svg#attach"></use>
+                                  </svg>
+                                </div>
+                              </div>
+                              <h3 class="fs-4 info-header__title">Вставьте ссылку</h3>
+                            </div>
+                          </header>
+                          <div class="u-content examples-card__text">
+                            <p>Вы можете дать ИИ ссылку и задать любой вопрос по содержанию страницы</p>
+                          </div>
+                          <footer class="examples-card__footer">
+                            <p class="examples-card__footer-appeal">Сделай краткое описание статьи&nbsp;на сайте</p>
+                            <a href="chat.html" class="examples-card__footer-btn">Вставить ссылку ></button>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <footer class="examples__appeal">
+                <p class="title fs-4 examples__appeal-title">Или попробуйте отправить свой&nbsp;запрос</p>
+                <a href="chat.html" class="btn btn--size-lg btn--theme-accent-fill examples__appeal-btn">
+                  <span class="btn__inner">
+                    <span class="btn__title">Начать чат</span>
+                  </span>
+                </a>
+              </footer>
+            </div>
+          </section>
+          <!-- examples END -->
+          <!-- reviews BEGIN -->
+          <section id="reviews" class="reviews">
+            <div class="container container--size-md reviews__container">
+              <h2 class="fs-1 reviews__title">Отзывы</h2>
+              <div class="d-sm-block reviews-rating reviews-rating--theme-accent reviews__reviews-rating">
+                <div class="reviews-rating__inner">
+                  <picture class="reviews-rating__logo">
+                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                  </picture>
+                  <p class="fs-1 reviews-rating__estimation">4.9</p>
+                  <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
+                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                </div>
+              </div>
+              <div class="js-reviews-slider-mobile-init swiper reviews__list">
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide-hidden swiper-slide">
+                    <div class="reviews-rating reviews-rating--theme-accent reviews__list-card">
+                      <div class="reviews-rating__inner">
+                        <picture class="reviews-rating__logo">
+                          <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                        </picture>
+                        <p class="fs-1 reviews-rating__estimation">4.9</p>
+                        <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
+                        <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Елена</p>
+                            <p class="reviews-card__position">Маркетолог</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">02 июля</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Нейросеть стала незаменимым помощником в создании контента для наших кампаний. Она генерирует тексты, которые точно отвечают нашим требованиям и вдохновляют на новые идеи. Удобно, что нет необходимости в VPN.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Александр</p>
+                            <p class="reviews-card__position">SEO-специалист</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">29 июня</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Используя нейросеть для оптимизации контента, я значительно увеличил трафик на сайте. Этот инструмент не только экономит время, но и обеспечивает высокое качество результатов. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Ольга</p>
+                            <p class="reviews-card__position">Студентка</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">15 мая</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Моя продуктивность после использования EVA&nbsp;AI выросла невероятно. Я стала намного эффективнее с помощью ИИ. </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Иван</p>
+                            <p class="reviews-card__position">Копирайтер</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">01 мая</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Как копирайтер, я ценю возможность быстро генерировать качественный контент с помощью нейросети. Этот инструмент помогает мне сохранять вдохновение и продуктивность.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="swiper-slide">
+                    <div class="reviews-card reviews__list-card">
+                      <div class="reviews-card__inner">
+                        <header class="reviews-card__header">
+                          <div class="reviews-card__user">
+                            <p class="title fs-4 reviews-card__name">Наталья</p>
+                            <p class="reviews-card__position">Предприниматель</p>
+                          </div>
+                          <div class="reviews-card__info">
+                            <div class="u-rating reviews-card__rating" style="--rating-progress: 5"></div>
+                            <time class="reviews-card__date">09 февраля</time>
+                          </div>
+                        </header>
+                        <div class="reviews-card__content">
+                          <div class="u-content reviews-card__text">
+                            <p>Нейросеть помогает мне разрабатывать стратегии для моего бизнеса, а также анализировать рынок. Это мощный инструмент для&nbsp;любого, кто стремится к успеху в бизнесе.</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="d-sm-block slider-control reviews__slider-control">
+                <div class="slider-control__inner">
+                  <button type="button" class="js-swiper-button-prev-1 swiper-button swiper-button-prev swiper-button--theme-accent swiper-button--size-sm slider-control__btn">
+                    prev
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                    </svg>
+                  </button>
+                  <button type="button" class="js-swiper-button-next-1 swiper-button swiper-button-next swiper-button--theme-accent swiper-button--size-sm slider-control__btn">
+                    next
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- reviews END -->
+          <!-- faq BEGIN -->
+          <section id="faq" class="faq">
+            <div class="container container--size-md faq__container">
+              <h2 class="fs-1 faq__title">Вы часто спрашиваете&nbsp;нас</h2>
+              <div itemscope itemtype="https://schema.org/FAQPage" class="faq__list">
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Что такое Нейросеть и&nbsp;как&nbsp;она&nbsp;работает?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть – это мощный инструмент на базе искусственного интеллекта, который помогает вам создавать тексты, изображения и преобразовывать аудио в текст. Она обучена на огромном количестве данных и способна генерировать высококачественные результаты за считанные секунды.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Нужно ли использовать VPN для доступа к&nbsp;Нейросети?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нет, для использования Нейросети не требуется VPN. Вы можете свободно пользоваться всеми её возможностями без каких-либо ограничений.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Можно ли оплатить услуги Нейросети картой РФ?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Да, вы можете оплатить наши услуги картой РФ. Мы поддерживаем различные способы оплаты, чтобы сделать процесс как можно более удобным для наших пользователей.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Какую информацию может генерировать Нейросеть?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть может генерировать тексты различного типа, создавать изображения по вашему запросу и преобразовывать аудио в текст. Это идеальный инструмент для маркетологов, студентов, копирайтеров, предпринимателей и многих других.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Как быстро Нейросеть обрабатывает запросы?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть работает с высокой скоростью и способна генерировать результаты за считанные секунды. Это позволяет вам быстро получать нужные данные и использовать их в своей работе.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Какие данные требуется предоставить для начала использования?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Для начала использования вам нужно зарегистрироваться, предоставив адрес электронной почты и создав пароль. После регистрации вы получите доступ ко всем функциям Нейросети.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Есть ли ограничения на использование Нейросети?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нет, наша Нейросеть предоставляет безлимитный доступ к своим функциям. Вы можете использовать её столько, сколько вам нужно, без&nbsp;ограничений по времени или количеству запросов.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">Какую пользу я могу получить от использования Нейросети?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть помогает экономить время, улучшать качество контента, автоматизировать рутинные задачи и получать ценные инсайты из данных. Это идеальный инструмент для повышения эффективности работы в различных областях.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+                <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                  <div class="faq-card__header">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
+                      <h3 itemprop="name" class="fs-4 faq-card__title">С чем работает нейросеть EVA&nbsp;AI?</h3>
+                    </button>
+                    <div class="faq-card__icon">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#plus"></use>
+                      </svg>
+                    </div>
+                  </div>
+                  <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                    <div class="faq-card__inner">
+                      <div class="u-content faq-card__text">
+                        <p>Нейросеть Leonard AI обладает широкими возможностями и работает с различными типами контента. Вы можете вставить ссылку на видео с YouTube и получить краткий пересказ или задать вопросы по содержанию. Она также справляется с документами: вставляйте ссылки на веб-страницы или загружайте файлы (PDF, DOCX и другие форматы) для получения ответов на вопросы или краткой выжимки. Нейросеть может генерировать изображения по описанию и анализировать загруженные изображения. Кроме того, EVA&nbsp;AI поддерживает работу с текстовыми данными: генерирует тексты по заданной теме и помогает создавать резюме, письма, статьи и другие документы. Наша нейросеть постоянно развивается, добавляя новые функции и улучшая существующие, чтобы максимально удовлетворить потребности наших пользователей.</p>
+                      </div>
+                    </div>
+                  </div>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!-- faq END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

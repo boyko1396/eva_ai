@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Settings'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="eva-chat">
+      <div class="chat eva-chat__inner">
+        <div class="chat__inner">
+          <div class="chat__body">
+            @@include('html/components/header-chat.html')
+            @@include('html/components/chat-aside-left.html', {
+              'class_chat': ' ',
+              'class_images': ' ',
+              'class_settings': 'is-active'
+            })
+            <main class="u-scrollbar chat-settings chat__settings" role="main">
+              <div class="chat-settings__body">
+                <h1 class="fs-3 chat-settings__title">Настройки</h1>
+                <div class="row chat-settings__row">
+                  <div class="row__col--6 chat-settings__col chat-settings__col--settings">
+                    <article class="u-box u-box--theme-grey chat-settings__box chat-settings__box--profile">
+                      <div class="chat-settings__box-profile">
+                        <header class="chat-settings__box-header">
+                          <h2 class="fs-4 chat-settings__box-title">Профиль</h2>
+                        </header>
+                        <div class="chat-settings__box-profile-line-list">
+                          <div class="chat-settings__box-profile-line">
+                            <p class="title fs-4 chat-settings__box-profile-line-title">Почта</p>
+                            <p class="chat-settings__box-profile-line-text">mail@example.com</p>
+                          </div>
+                          <div class="chat-settings__box-profile-line">
+                            <p class="title fs-4 chat-settings__box-profile-line-title">Пароль</p>
+                            <p class="chat-settings__box-profile-line-text">*************</p>
+                            <button type="button" data-modal="popup-change-password" class="change-btn chat-settings__box-profile-line-change-btn">Сменить пароль</button>
+                          </div>
+                        </div>
+                        <div class="btn-group btn-group--gap-sm chat-settings__box-group">
+                          <div class="btn-group__inner">
+                            <div class="btn-group__col">
+                              <button type="button" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                <span class="btn__inner">
+                                  <span class="btn__title">Выйти</span>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="btn-group__col">
+                              <button type="button" data-modal="popup-change-password" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                <span class="btn__inner">
+                                  <span class="btn__title">Сменить пароль</span>
+                                </span>
+                              </button>
+                            </div>
+                            <div class="btn-group__col">
+                              <button type="button" class="btn btn--size-sm btn--theme-red-outline btn-group__item">
+                                <span class="btn__inner">
+                                  <span class="btn__title">Удалить аккаунт</span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="u-box u-box--theme-grey chat-settings__box chat-settings__box--contacts">
+                      <div class="chat-settings__box-contacts">
+                        <header class="chat-settings__box-header">
+                          <h2 class="fs-4 chat-settings__box-title">Подключение WhatsApp</h2>
+                        </header>
+                        <div class="chat-settings__box-profile-line-list">
+                          <div class="chat-settings__box-profile-line">
+                            <p class="title fs-4 chat-settings__box-profile-line-title">WhatsApp Статус</p>
+                            <p class="color-red chat-settings__box-profile-line-text"><strong>Не подключен</strong></p>
+                          </div>
+                        </div>
+                        <div class="chat-settings__box-profile-line">
+                          <p class="title fs-4 chat-settings__box-profile-line-title">Подключите WhatsApp</p>
+                          <p class="chat-settings__box-profile-line-subtext">Нейросеть прямо у вас в кармане!</p>
+                        </div>
+                        <div class="btn-group btn-group--gap-sm chat-settings__box-group">
+                          <div class="btn-group__inner">
+                            <div class="btn-group__col">
+                              <button type="button" class="btn btn--size-sm btn--theme-accent-fill btn-group__item">
+                                <span class="btn__inner">
+                                  <span class="btn__title">Подключить</span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="u-box u-box--theme-grey chat-settings__box chat-settings__box--support">
+                      <div class="chat-settings__box-support">
+                        <header class="chat-settings__box-header">
+                          <h2 class="fs-4 chat-settings__box-title">Связаться с поддержкой</h2>
+                        </header>
+                        <p class="chat-settings__box-support-subtitle">У вас возникли проблемы? Наша служба поддержки готова помочь вам. Нажмите на ссылку ниже, чтобы связаться с&nbsp;нами:</p>
+                        <div class="btn-group btn-group--gap-sm chat-settings__box-group">
+                          <div class="btn-group__inner">
+                            <div class="btn-group__col">
+                              <a href="contacts.html" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                <span class="btn__inner">
+                                  <span class="btn__title">Email поддержка</span>
+                                </span>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--6 chat-settings__col chat-settings__col--subscribe">
+                    <article class="u-box u-box--theme-grey chat-settings__box chat-settings__box--subscribe">
+                      <div class="chat-settings__box-subscribe">
+                        <header class="chat-settings__box-header">
+                          <h2 class="fs-4 chat-settings__box-title">Профиль</h2>
+                          <div class="chat-settings__box-header-plan">
+                            <p class="fs-4 chat-settings__box-header-plan-name is-free">Free</p>
+                            <p class="fs-4 chat-settings__box-header-plan-name is-pro"><strong>PRO</strong></p>
+                          </div>
+                        </header>
+                        <div class="chat-settings__box-plan">
+                          <div class="chat-settings__box-plan-list">
+                            <article class="subscription-card chat-settings__box-plan-list-card">
+                              <div class="subscription-card__inner">
+                                <div class="subscription-card__main">
+                                  <div class="subscription-card__picture">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-chatgpt-v-3"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__content">
+                                    <h3 class="fs-4 subscription-card__title">Ответы от&nbsp;ChatGPT&nbsp;API</h3>
+                                    <p class="subscription-card__description">Получайте ответы на любые ваши вопросы</p>
+                                  </div>
+                                </div>
+                                <div class="subscription-card__status">
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="subscription-card chat-settings__box-plan-list-card">
+                              <div class="subscription-card__inner">
+                                <div class="subscription-card__main">
+                                  <div class="subscription-card__picture">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-chatgpt-v-4"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__content">
+                                    <h3 class="fs-4 subscription-card__title">Доступ к&nbsp;ChatGPT&nbsp;4.0</h3>
+                                    <p class="subscription-card__description">Более точные и&nbsp;детализированные ответы</p>
+                                  </div>
+                                </div>
+                                <div class="subscription-card__status">
+                                  <div class="subscription-card__status-item is-false">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-minus"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="subscription-card chat-settings__box-plan-list-card">
+                              <div class="subscription-card__inner">
+                                <div class="subscription-card__main">
+                                  <div class="subscription-card__picture">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-atoms"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__content">
+                                    <h3 class="fs-4 subscription-card__title">Продвинутые<br>ИИ-инструменты</h3>
+                                    <p class="subscription-card__description">Обработка файлов, генерация&nbsp;изображений</p>
+                                  </div>
+                                </div>
+                                <div class="subscription-card__status">
+                                  <div class="subscription-card__status-item is-false">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-minus"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="subscription-card chat-settings__box-plan-list-card">
+                              <div class="subscription-card__inner">
+                                <div class="subscription-card__main">
+                                  <div class="subscription-card__picture">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-infinite"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__content">
+                                    <h3 class="fs-4 subscription-card__title">Безлимитные сообщения</h3>
+                                    <p class="subscription-card__description">Никаких лимитов на количество диалогов</p>
+                                  </div>
+                                </div>
+                                <div class="subscription-card__status">
+                                  <div class="subscription-card__status-item is-false">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-minus"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="subscription-card chat-settings__box-plan-list-card">
+                              <div class="subscription-card__inner">
+                                <div class="subscription-card__main">
+                                  <div class="subscription-card__picture">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-adv"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__content">
+                                    <h3 class="fs-4 subscription-card__title">Отсутствие рекламы</h3>
+                                    <p class="subscription-card__description">Получайте ответы от ИИ без&nbsp;рекламы</p>
+                                  </div>
+                                </div>
+                                <div class="subscription-card__status">
+                                  <div class="subscription-card__status-item is-false">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-minus"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </article>
+                            <article class="subscription-card chat-settings__box-plan-list-card">
+                              <div class="subscription-card__inner">
+                                <div class="subscription-card__main">
+                                  <picture class="subscription-card__picture">
+                                    <img src="images/svg/plan-whatsapp.svg" alt="Чат в WhatsApp">
+                                  </picture>
+                                  <div class="subscription-card__content">
+                                    <h3 class="fs-4 subscription-card__title">Чат в WhatsApp</h3>
+                                    <p class="subscription-card__description">Используйте нейросеть в&nbsp;привычном приложении</p>
+                                  </div>
+                                </div>
+                                <div class="subscription-card__status">
+                                  <div class="subscription-card__status-item is-false">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-minus"></use>
+                                    </svg>
+                                  </div>
+                                  <div class="subscription-card__status-item is-true">
+                                    <svg class="u-icon">
+                                      <use xlink:href="images/icons/icons.svg#plan-plus"></use>
+                                    </svg>
+                                  </div>
+                                </div>
+                              </div>
+                            </article>
+                          </div>
+                        </div>
+                        <div class="btn-group btn-group--gap-sm chat-settings__box-group">
+                          <div class="btn-group__inner">
+                            <div class="btn-group__col">
+                              <button type="button" data-modal="popup-cancel-subscription" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                <span class="btn__inner">
+                                  <span class="btn__title">Отменить подписку</span>
+                                </span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                    <article class="u-box u-box--theme-grey chat-settings__box chat-settings__box--useful">
+                      <div class="chat-settings__box-useful">
+                        <header class="chat-settings__box-header">
+                          <h2 class="fs-4 chat-settings__box-title">Полезные ссылки</h2>
+                        </header>
+                        <div class="chat-settings__box-useful-list">
+                          <div class="chat-settings__box-useful-card">
+                            <p class="title fs-4 chat-settings__box-useful-card-title">Страница нашей компании</p>
+                            <div class="btn-group btn-group--gap-sm chat-settings__box-group">
+                              <div class="btn-group__inner">
+                                <div class="btn-group__col">
+                                  <a href="#" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                    <span class="btn__inner">
+                                      <span class="btn__title">О нас</span>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="chat-settings__box-useful-card">
+                            <p class="title fs-4 chat-settings__box-useful-card-title">Документы</p>
+                            <div class="btn-group btn-group--gap-sm chat-settings__box-group">
+                              <div class="btn-group__inner">
+                                <div class="btn-group__col">
+                                  <a href="privacy.html" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                    <span class="btn__inner">
+                                      <span class="btn__title">Политика конфиденциальности</span>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="btn-group__col">
+                                  <a href="offer.html" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                    <span class="btn__inner">
+                                      <span class="btn__title">Оферта</span>
+                                    </span>
+                                  </a>
+                                </div>
+                                <div class="btn-group__col">
+                                  <a href="terms.html" class="btn btn--size-sm btn--theme-accent-outline btn-group__item">
+                                    <span class="btn__inner">
+                                      <span class="btn__title">Условия использования</span>
+                                    </span>
+                                  </a>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="row__col--12 chat-settings__col chat-settings__col--faq">
+                    <article class="u-box u-box--theme-grey chat-settings__box chat-settings__box--faq">
+                      <div class="chat-settings__box-faq">
+                        <header class="chat-settings__box-header">
+                          <h2 class="fs-4 chat-settings__box-title">FAQ</h2>
+                        </header>
+                        <div itemscope itemtype="https://schema.org/FAQPage" class="chat-settings__box-faq-list">
+                          <article class="faq-card faq-card--theme-white-simple chat-settings__box-faq-list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-card__header">
+                              <button type="button" class="js-faq-card-toggle faq-card__btn">
+                                <h3 itemprop="name" class="fs-4 faq-card__title">Как отменить подписку?</h3>
+                              </button>
+                              <div class="faq-card__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#plus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                              <div class="faq-card__inner">
+                                <div class="u-content faq-card__text">
+                                  <p>Чтобы отменить подписку, зайдите в раздел «Управлять подпиской» на странице настроек и нажмите на кнопку «Отменить подписку». Ваша подписка будет отменена в конце текущего периода подписки, что приведет к прекращению вашего премиум-члена. После отмены подписки с вас не будут взиматься никакие дополнительные платежи.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                          <article class="faq-card faq-card--theme-white-simple chat-settings__box-faq-list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+                            <div class="faq-card__header">
+                              <button type="button" class="js-faq-card-toggle faq-card__btn">
+                                <h3 itemprop="name" class="fs-4 faq-card__title">Как запросить возврат?</h3>
+                              </button>
+                              <div class="faq-card__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#plus"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <div itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer" class="faq-card__dropdown">
+                              <div class="faq-card__inner">
+                                <div class="u-content faq-card__text">
+                                  <p>Если вы хотите запросить возврат денег, отправьте письмо в нашу службу поддержки с описанием вашего запроса на возврат. Ваш запрос на возврат будет обработан в течение 5-10 рабочих дней, если ваша ситуация соответствует нашей политике возврата.</p>
+                                </div>
+                              </div>
+                            </div>
+                          </article>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

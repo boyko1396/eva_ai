@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Forgot'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main">
+          <!-- login-section BEGIN -->
+          <section class="login-section">
+            <picture class="glare glare--1 login-section__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md login-section__container">
+              <div class="login-block login-section__block">
+                <picture class="login-block__bg">
+                  <source
+                    srcset="images/login-block-bg.webp"
+                    type="image/webp">
+                  <img
+                    src="images/login-block-bg.jpg"
+                    alt="Восстановление пароля"
+                    width="1200"
+                    height="583">
+                </picture>
+                <div class="login-block__row">
+                  <div class="login-block__col login-block__col--content">
+                    <div class="login-block__content">
+                      <div class="reviews-rating reviews-rating--theme-accent-blur login-block__rating">
+                        <div class="reviews-rating__inner">
+                          <picture class="reviews-rating__logo">
+                            <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                          </picture>
+                          <p class="fs-1 reviews-rating__estimation">4.9</p>
+                          <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
+                          <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                        </div>
+                      </div>
+                      <div class="login-block__benefits">
+                        <div class="info-header login-block__benefits-item">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#picture"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
+                          </div>
+                        </div>
+                        <div class="info-header login-block__benefits-item">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#text"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
+                          </div>
+                        </div>
+                        <div class="info-header login-block__benefits-item">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#question-mark"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="login-block__col login-block__col--form">
+                    <p class="title fs-2 login-block__title">Восстановление пароля</p>
+                    <p class="login-block__subtitle is-forgot">Введите адрес электронной почты, который вы использовали при регистрации, и&nbsp;мы вышлем вам ссылку для сброса пароля</p>
+                    <form action="#" class="login-block__form">
+                      <div class="u-input login-block__form-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com">
+                        </label>
+                      </div>
+                      <div class="login-block__form-footer">
+                        <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить</span>
+                          </span>
+                        </button>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- login-section END -->
+        </main>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

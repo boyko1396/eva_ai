@@ -1,0 +1,25 @@
+.faq {
+  padding: var(--gap-section-y) 0 104rem;
+  @media (max-width: $lg) {
+    padding-bottom: 84rem;
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 60rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__list {
+    &-card {
+      &:not(:last-child) {
+        margin-bottom: var(--gap-fluid);
+        @media (max-width: $sm) {
+          margin-bottom: var(--gap);
+        }
+      }
+    }
+  }
+}

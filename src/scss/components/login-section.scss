@@ -1,0 +1,28 @@
+.login-section {
+  padding: 60rem 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-grow: 1;
+  position: relative;
+  z-index: 0;
+  @media (max-width: $lg) {
+    padding: var(--gap-container) 0;
+  }
+  &__glare {
+    margin-left: 780rem;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(60deg) scaleY(-1);
+    @media (max-width: $lg) {
+      width: 600rem;
+      margin-left: 0;
+      bottom: 0;
+      transform: translate(-50%, 0) rotate(60deg) scaleY(-1);
+    }
+  }
+  &__container {
+  }
+  &__block {
+  }
+}

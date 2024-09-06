@@ -1,0 +1,8 @@
+.eva-chat {
+  background: url(../images/bg-pattern-1.svg) center center $darkColor no-repeat;
+  height: 100%;
+  color: $whiteColor;
+  &__inner {
+    width: 100%;
+  }
+}

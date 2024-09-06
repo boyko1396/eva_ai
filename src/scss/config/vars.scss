@@ -1,0 +1,100 @@
+$siteResolution: 1px;
+$mainFont: 'Manrope';
+$mainWeight: 400;
+$lineHeight1: 1.375;
+$lineHeight3: 1.2;
+$lineHeight4: 1;
+$lineHeight5: 1.1;
+$lineHeightDefault: $lineHeight1;
+
+$containerWidthMd: 1232rem;
+
+$radiusXxs: 4rem;
+$radiusXs: 6rem;
+$radiusSm: 10rem;
+$radiusMd: 20rem;
+
+$gap: 12rem;
+$gapFluid: 24rem;
+
+$whiteColor: #ffffff;
+$blackColor: #000000;
+$darkColor: #111425;
+$darkLightColor: #292B3B;
+$darkMediumColor: #4B4B4B;
+$greyColor: #E6E6E6;
+$greyMediumColor: #ABABAB;
+$greyNeutralColor: #BFBFBF;
+$greyLightColor: #9A9A9A;
+$purpleColor: #A129FF;
+$purpleLightColor: #ECD4FE;
+$purpleDarkColor: #7A00D9;
+$purpleMediumColor: #BD6AFF;
+$redColor: #D92D20;
+$accentColor: $purpleColor;
+
+$bgSite: $darkColor;
+
+$shadowBlack1: linear-gradient(270deg, rgba($blackColor, 0) 25.17%, rgba($blackColor, 0.85) 100%);
+
+$gradientAccent1: linear-gradient(180deg, #6618A3 0%, $darkColor 100%);
+
+$fontFamily: $mainFont, Open Sans, sans-serif, Arial;
+$fontColor: $whiteColor;
+$fontWeight: $mainWeight;
+
+$transition: all .4s 0ms;
+
+$xl: 1340px;
+$xl-mf: $xl + 1;
+
+$lg: 1199px;
+$lg-mf: $lg + 1;
+
+$md: 991px;
+$md-mf: $md + 1;
+
+$sm: 767px;
+$sm-mf: $sm + 1;
+
+$xs: 576px;
+$xs-mf: $xs + 1;
+
+:root {
+  --fs-default: 16rem;
+  --fs-1: 40rem;
+  --fs-2: 32rem;
+  --fs-3: 24rem;
+  --fs-4: 16rem;
+  --fs-5: 14rem;
+  --fs-6: 12rem;
+  --fs-7: 10rem;
+
+  --gap: 12rem;
+  --gap-: -12rem;
+  --gap-fluid: 24rem;
+  --gap-fluid-: -24rem;
+  --gap-container: 16rem;
+  --gap-container-: -16rem;
+
+  --gap-section-y: 92rem;
+  --gap-section-y-: -92rem;
+
+  --scroll-offset: 102rem;
+
+  --header-height: var(--scroll-offset);
+
+  --vh: 1vh;
+  @media (max-width: $lg) {
+    --fs-default: 14rem;
+    --fs-1: 32rem;
+    --fs-2: 24rem;
+    --fs-3: 16rem;
+    --fs-4: 14rem;
+
+    --gap-section-y: 74rem;
+    --gap-section-y-: -74rem;
+
+    --scroll-offset: 76rem;
+  }
+}

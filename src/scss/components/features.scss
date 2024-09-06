@@ -1,0 +1,46 @@
+.features {
+  padding: var(--gap-section-y) 0;
+  position: relative;
+  z-index: 0;
+  &__glare {
+    margin-left: 780rem;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(60deg) scaleY(-1);
+    @media (max-width: $lg) {
+      margin: -350rem 0 0 190rem;
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(60deg) scaleY(-1);
+    }
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 60rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__list {
+    &-row {
+      margin-bottom: var(--gap-fluid-);
+      @media (max-width: $sm) {
+        --gap: 6rem;
+        --gap-: -6rem;
+        --gap-fluid: 12rem;
+        --gap-fluid-: -12rem;
+      }
+    }
+    &-col {
+      margin-bottom: var(--gap-fluid);
+      @media (max-width: $sm) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+}

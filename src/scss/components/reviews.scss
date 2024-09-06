@@ -1,0 +1,51 @@
+.reviews {
+  padding: var(--gap-section-y) 0;
+  &__container {
+  }
+  &__title {
+    margin: 0 0 60rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__reviews-rating {
+    margin: 0 0 var(--gap-fluid);
+  }
+  &__list {
+    margin-bottom: var(--gap-fluid-);
+    @media (max-width: $sm) {
+      margin: 0 var(--gap-);
+    }
+    &.swiper {
+      @media (max-width: $sm) {
+        overflow: visible;
+      }
+    }
+    .swiper-wrapper {
+      @media (min-width: $sm-mf) {
+        width: auto;
+        margin: 0 var(--gap-) var(--gap-fluid-);
+        display: flex;
+        flex-wrap: wrap;
+      }
+    }
+    .swiper-slide {
+      height: initial;
+      padding: 0 var(--gap);
+      @media (min-width: $sm-mf) {
+        max-width: 50%;
+        margin-bottom: var(--gap-fluid);
+        flex: 0 0 50%;
+      }
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+  &__slider-control {
+    margin: var(--gap-fluid) 0 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+}

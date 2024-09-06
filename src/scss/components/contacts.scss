@@ -1,0 +1,75 @@
+.contacts {
+  padding: 24rem 0 64rem;
+  position: relative;
+  z-index: 2;
+  &__glare {
+    margin-left: -660rem;
+    top: -67%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-120deg);
+    @media (max-width: $lg) {
+      margin-left: 0;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) rotate(-120deg);
+    }
+  }
+  &__container {
+  }
+  &__breadcrumbs {
+    margin: 0 0 24rem;
+  }
+  &__row {
+    &-col {
+      &--content {
+        @media (max-width: $sm) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+      &--media {
+        @media (max-width: $sm) {
+          display: none;
+        }
+      }
+    }
+  }
+  &__content {
+    padding: 48rem;
+    @media (max-width: $lg) {
+      padding: var(--gap-fluid);
+    }
+  }
+  &__title {
+    margin: 0 0 3.5rem;
+    text-transform: uppercase;
+    @media (max-width: $lg) {
+      margin-bottom: 4rem;
+    }
+  }
+  &__text {
+    margin: 0 0 36rem;
+    color: $greyNeutralColor;
+  }
+  &__form {
+    margin: 0 0 var(--gap-fluid);
+    &-input {
+      width: 100%;
+      & + & {
+        margin-top: 8rem;
+      }
+    }
+    &-btn {
+      margin-top: var(--gap-fluid);
+      vertical-align: top;
+    }
+  }
+  &__privacy {
+  }
+  &__hero {
+    @extend %img-cover;
+    height: 100%;
+    border-radius: $radiusMd;
+    z-index: -1;
+  }
+}

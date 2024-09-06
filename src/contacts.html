@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Контакты'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <!-- header BEGIN -->
+        @@include('html/components/header-page-inner.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
+        <main role="main" class="site__main">
+          <!-- contacts BEGIN -->
+          <section class="contacts">
+            <picture class="glare glare--1 contacts__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md contacts__container">
+              <div class="u-breadcrumbs contacts__breadcrumbs">
+                <ul class="u-breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <a href="/" itemprop="item">
+                      <span itemprop="name">Главная</span>
+                    </a>
+                    <meta itemprop="position" content="1">
+                  </li>
+                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                    <span itemprop="name">Контакты</span>
+                    <meta itemprop="position" content="2">
+                  </li>
+                </ul>
+              </div>
+              <div class="row contacts__row">
+                <div class="row__col--6 contacts__row-col contacts__row-col--content">
+                  <div class="u-box u-box--theme-grey contacts__content">
+                    <h1 class="fs-2 contacts__title">Контакты</h1>
+                    <div class="u-content contacts__text">
+                      <p>Если у вас есть вопросы или&nbsp;предложения, пожалуйста, заполните форму, и наша команда свяжется с вами  в ближайшее время</p>
+                    </div>
+                    <form action="#" class="contacts__form">
+                      <div class="u-input contacts__form-input">
+                        <label class="u-input__label">
+                          <input type="name" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Ваше имя">
+                        </label>
+                      </div>
+                      <div class="u-input contacts__form-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com">
+                        </label>
+                      </div>
+                      <div class="u-input contacts__form-input">
+                        <div class="u-input__label">
+                          <input type="tel" name="phone" class="js-input-tel u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="+7 (999) 999 99 99">
+                        </div>
+                      </div>
+                      <button type="submit" class="btn btn--size-md btn--theme-accent-fill contacts__form-btn">
+                        <span class="btn__inner">
+                          <span class="btn__title">Отправить</span>
+                        </span>
+                      </button>
+                    </form>
+                    <div class="u-privacy contacts__privacy">
+                      <p>Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+                    </div>
+                  </div>
+                </div>
+                <div class="row__col--6 contacts__row-col contacts__row-col--media">
+                  <picture class="contacts__hero">
+                    <source
+                      srcset="images/contacts-hero.webp"
+                      type="image/webp">
+                    <img
+                      src="images/contacts-hero.jpg"
+                      alt="Контакты"
+                      width="588"
+                      height="564">
+                  </picture>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- contacts END -->
+        </main>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer-page-inner.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

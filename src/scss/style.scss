@@ -1,0 +1,50 @@
+@use 'sass:math';
+
+/** Local font inclusion from the "./src/fonts" folder */
+@import 'config/fonts';
+
+/** Variable inclusion */
+@import 'config/vars';
+
+/** Inclusion of sass functions, mixins, and style extends */
+@import 'config/functions';
+@import 'config/mixins';
+@import 'config/patternSelectors';
+
+/** Reset */
+@import 'config/default';
+
+/** Libraries */
+@import 'libs/swiper';
+@import 'libs/intlTelInput';
+
+/** Common parameters, templates, and utility classes */
+@import 'config/media';
+@import 'config/base';
+
+/** Common BEM blocks used throughout the project */
+@import 'config/common';
+@import 'components/intlTelInput';
+@import 'components/login-block';
+@import 'components/popup';
+@import 'components/eva-chat';
+@import 'components/header';
+@import 'components/header-chat';
+@import 'components/footer';
+@import 'components/page';
+@import 'components/intro';
+@import 'components/chat-aside';
+@import 'components/chat-main';
+@import 'components/chat-settings';
+@import 'components/chat';
+@import 'components/about';
+@import 'components/target-audience';
+@import 'components/features';
+@import 'components/how-works';
+@import 'components/examples';
+@import 'components/reviews';
+@import 'components/faq';
+@import 'components/contacts';
+@import 'components/login-section';
+
+/** Inclusion of styles for individual blocks and sections */

@@ -1,0 +1,221 @@
+.chat-settings {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  &__body {
+  }
+  &__title {
+    margin: 8rem 0 var(--gap-fluid);
+    text-transform: uppercase;
+    @media (max-width: $lg) {
+      margin: var(--gap) 0;
+      font-size: var(--fs-2);
+    }
+  }
+  &__row {
+  }
+  &__col {
+    & + & {
+      @media (max-width: $sm) {
+        margin-top: var(--gap);
+      }
+    }
+    &--settings {
+      max-width: 47.3%;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 47.3%;
+      @media (max-width: $sm) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--subscribe {
+      max-width: 52.7%;
+      display: flex;
+      flex-direction: column;
+      flex-basis: 52.7%;
+      @media (max-width: $sm) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &--faq {
+      margin-top: var(--gap-fluid);
+      @media (max-width: $sm) {
+        margin-top: var(--gap);
+      }
+    }
+  }
+  &__box {
+    --box-gap: 32rem;
+    padding: calc(2 * var(--gap-fluid)) var(--gap-fluid);
+    @media (max-width: $lg) {
+      --box-gap: var(--gap-fluid);
+      padding: 36rem var(--gap-container);
+    }
+    & + & {
+      margin-top: var(--gap-fluid);
+      @media (max-width: $sm) {
+        margin-top: var(--gap);
+      }
+    }
+    &--profile {
+    }
+    &--contacts {
+    }
+    &--support {
+      flex-grow: 1;
+    }
+    &--subscribe {
+    }
+    &--useful {
+      flex-grow: 1;
+    }
+    &-profile {
+      &-line {
+        & + & {
+          margin-top: var(--box-gap);
+        }
+        &-list {
+          &:after {
+            background: $greyLightColor;
+            width: 100%;
+            height: 1px;
+            margin: var(--box-gap) 0;
+            content: '';
+            display: block;
+          }
+        }
+        &-title {
+          margin: 0 0 4rem;
+        }
+        &-text {
+          color: $greyMediumColor;
+        }
+        &-subtext {
+          font-size: var(--fs-6);
+          color: $greyMediumColor;
+        }
+        &-change-btn {
+          margin-top: -3rem;
+        }
+      }
+    }
+    &-contacts {
+    }
+    &-support {
+      &-subtitle {
+        margin: var(--gap-fluid-) 0 var(--box-gap);
+        font-size: var(--fs-6);
+        color: $greyLightColor;
+        @media (max-width: $lg) {
+          margin-top: -16rem;
+        }
+      }
+    }
+    &-subscribe {
+    }
+    &-useful {
+      &-list {
+      }
+      &-card {
+        &:not(:last-child) {
+          margin-bottom: var(--box-gap);
+        }
+        &-title {
+          margin: 0 0 var(--gap);
+        }
+      }
+    }
+    &-faq {
+      &-list {
+        &-card {
+          border-bottom: 1px solid $accentColor;
+        }
+      }
+    }
+    &-header {
+      margin: 0 0 var(--box-gap);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @media (max-width: $lg) {
+        flex-wrap: wrap;
+      }
+      &-plan {
+        display: flex;
+        flex-shrink: 0;
+        @media (max-width: $lg) {
+          max-width: 100%;
+          margin: 10rem 0 0;
+          flex-basis: 100%;
+          justify-content: flex-end;
+        }
+        &-name {
+          min-width: 36rem;
+          margin: 0 0 0 40rem;
+          font-weight: bold;
+          text-align: center;
+          @media (max-width: $lg) {
+            min-width: 24rem;
+            margin-left: 22rem;
+          }
+          &.is-free {
+            color: $greyMediumColor;
+          }
+          &.is-pro {
+            color: $accentColor;
+            @media (max-width: $lg) {
+              margin-right: -1rem;
+            }
+          }
+        }
+      }
+    }
+    &-plan {
+      &-list {
+        margin-bottom: var(--box-gap);
+        &-card {
+          &:not(:last-child) {
+            margin-bottom: var(--box-gap);
+          }
+        }
+      }
+    }
+    &-subscription {
+      &-row {
+        margin: 36rem -6rem var(--gap);
+        display: flex;
+        @media (max-width: $md) {
+        }
+      }
+      &-col {
+        max-width: 50%;
+        padding: 0 6rem;
+        flex: 0 0 50%;
+      }
+      &-card {
+        height: 100%;
+      }
+      &-btn {
+        width: 100%;
+      }
+    }
+    &-title {
+      margin: 0;
+      text-transform: uppercase;
+      @media (max-width: $lg) {
+        font-size: var(--fs-3);
+      }
+    }
+    &-group {
+      margin-top: var(--gap);
+      .btn {
+        @media (max-width: $lg) {
+          --btn-padding-x: 15rem;
+        }
+      }
+    }
+  }
+}

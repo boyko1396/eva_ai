@@ -1,0 +1,113 @@
+.chat-main {
+  display: flex;
+  flex-direction: column;
+  &__body {
+    margin: 0 var(--gap-fluid-) var(--gap-) 0;
+    padding: 0 var(--gap-fluid) var(--gap-fluid) 0;
+    flex: 1 1 0;
+    &-appeal {
+      background: rgba($whiteColor, .1);
+      margin: 0 0 72rem;
+      padding: 16rem;
+      font-size: var(--fs-default);
+      border-radius: $radiusSm;
+      @media (max-width: $lg) {
+        backdrop-filter: blur(10px);
+        margin-bottom: 42rem;
+      }
+    }
+    &-hint {
+      margin: 0 0 102rem;
+      @media (max-width: $lg) {
+        margin-bottom: 42rem;
+      }
+      &-list {
+        display: flex;
+        gap: var(--gap);
+        @media (max-width: $lg) {
+          flex-wrap: wrap;
+        }
+      }
+      &-btn {
+        @media (min-width: $lg-mf) {
+          flex: 1;
+        }
+        @media (max-width: $lg) {
+          max-width: calc(50% - var(--gap) / 2);
+          flex-basis: calc(50% - var(--gap) / 2);
+        }
+        @media (max-width: $xs) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+    &-message {
+      &:not(:last-child) {
+        margin-bottom: var(--gap-fluid);
+        @media (max-width: $sm) {
+          margin-bottom: var(--gap);
+        }
+      }
+      &-wrapper {
+      }
+    }
+  }
+  &__footer {
+    flex-shrink: 0;
+    position: relative;
+    &-action {
+      width: 100%;
+      padding: 0 0 var(--gap);
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      position: absolute;
+      bottom: 100%;
+      left: 0;
+      z-index: 2;
+      &-refresh {
+        margin: 0 0 0 auto;
+      }
+      &-version {
+        margin: 0 0 0 auto;
+      }
+    }
+  }
+  &__message {
+    position: relative;
+    &-textarea {
+    }
+    &-aside {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      top: 16rem;
+      right: 16rem;
+      @media (max-width: $lg) {
+      }
+    }
+    &-max-symbol {
+      display: none;
+      @media (min-width: $lg-mf) {
+        margin-right: var(--gap);
+        display: block;
+        font-size: var(--fs-5);
+        color: $greyMediumColor;
+        white-space: nowrap;
+      }
+    }
+    &-btn-send {
+      flex-shrink: 0;
+    }
+    &-textarea:placeholder-shown ~ .chat-main__message-aside .btn-send {
+      opacity: .5;
+      user-select: none;
+      pointer-events: none;
+    }
+    &-textarea:not(:placeholder-shown) ~ .chat-main__message-aside .btn-send {
+      .u-icon {
+      }
+    }
+  }
+}

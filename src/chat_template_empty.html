@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Chat template'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="eva-chat">
+      <div class="chat eva-chat__inner">
+        <div class="chat__inner">
+          <div class="chat__body">
+            @@include('html/components/header-chat.html')
+            @@include('html/components/chat-aside-left-empty.html', {
+              'class_chat': 'is-active',
+              'class_images': ' ',
+              'class_settings': ' '
+            })
+            <main class="u-box u-box--theme-grey chat-main chat__main" role="main">
+              <div class="js-chat-body u-scrollbar u-scrollbar--offset-right chat-main__body">
+                <div class="chat-main__body-message-wrapper">
+                  <div class="u-message u-message--user u-message--size-lg chat-main__body-message">
+                    <div class="u-content u-message__content">
+                      <p>Напиши меню на неделю</p>
+                    </div>
+                  </div>
+                  <div class="u-message u-message--chat u-message--size-lg chat-main__body-message">
+                    <div class="u-content u-message__content">
+                      <p>Конечно! Вот примерное меню на неделю:</p>
+                      <p><strong class="fs-percent-112">Понедельник:</strong></p>
+                      <p><strong>Завтрак:</strong> Омлет с овощами и тост.<br><strong>Обед:</strong> Куриный суп с лапшой.<br><strong>Ужин:</strong> Рыба, запеченная с лимоном и зеленью, с картофельным пюре.</p>
+                      <p><strong class="fs-percent-112">Вторник:</strong></p>
+                      <p><strong>Завтрак:</strong> Овсянка с фруктами и медом.<br><strong>Обед:</strong> Греческий салат и куриные шашлычки.<br><strong>Ужин:</strong> Паста с соусом Болоньезе и пармезаном.</p>
+                      <p><strong class="fs-percent-112">Среда:</strong></p>
+                      <p><strong>Завтрак:</strong> Йогурт с мюсли и ягодами.<br><strong>Обед:</strong> Овощное рагу с кусочками говядины.<br><strong>Ужин:</strong> Куриное филе в кефирном соусе с рисом.</p>
+                      <p><strong class="fs-percent-112">Четверг:</strong></p>
+                      <p><strong>Завтрак:</strong> Блины с творогом и вареньем.<br><strong>Обед:</strong> Суп-пюре из тыквы с сухариками.<br><strong>Ужин:</strong> Свинина в кисло-сладком соусе с овощами и рисом.</p>
+                      <p><strong class="fs-percent-112">Пятница:</strong></p>
+                      <p><strong>Завтрак:</strong> Гречневая каша с молоком и орехами.<br><strong>Обед:</strong> Салат Цезарь с курицей.<br><strong>Ужин:</strong> Лазанья с сыром и томатным соусом.</p>
+                      <p><strong class="fs-percent-112">Суббота:</strong></p>
+                      <p><strong>Завтрак:</strong> Смузи с бананом, шпинатом и йогуртом.<br><strong>Обед:</strong> Борщ со сметаной и чесночными пампушками.<br><strong>Ужин:</strong> Шашлык с овощами на гриле и картофельные дольки.</p>
+                      <p><strong class="fs-percent-112">Воскресенье:</strong></p>
+                      <p><strong>Завтрак:</strong> Сырники с медом и сметаной.<br><strong>Обед:</strong> Окрошка на квасе или кефире.<br><strong>Ужин:</strong> Запеченная курица с овощами и зеленым салатом.</p>
+                      <p>Приятного аппетита</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-main__footer">
+                <div class="chat-main__footer-action">
+                  <div class="js-chat-version chat-version chat-version--size-md chat-version--theme-grey chat-main__footer-action-version">
+                    <div class="chat-version__inner">
+                      <div class="chat-version__dropdown">
+                        <button type="button" data-version="3.5" class="js-chat-version-switch chat-version__dropdown-btn">GPT-3.5</button>
+                        <button type="button" data-version="4o" class="js-chat-version-switch chat-version__dropdown-btn is-active">GPT-4o</button>
+                      </div>
+                      <button type="button" class="js-chat-version-toggle chat-version__toggle">
+                        <svg class="u-icon chat-version__toggle-icon">
+                          <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                        </svg>
+                        <span class="chat-version__toggle-title"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <form action="#" class="chat-main__message">
+                  <textarea name="message" rows="" cols="" id="message-textarea" class="js-chat-textarea u-scrollbar u-textarea u-textarea--theme-white u-textarea--size-md chat-main__message-textarea" placeholder="Напишите ваше сообщение"></textarea>
+                  <div class="chat-main__message-aside">
+                    <p class="chat-main__message-max-symbol">0/10000</p>
+                    <button type="submit" id="send-button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__message-btn-send" title="Отправить">
+                      <span class="btn-send__inner">
+                        <span class="visually-hidden btn-send__title">Отправить сообщение</span>
+                        <span class="btn-send__icon">
+                          <svg class="u-icon">
+                            <use xlink:href="images/icons/icons.svg#paper-plane"></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

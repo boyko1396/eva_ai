@@ -1,0 +1,69 @@
+.chat {
+  height: 100%;
+  &__inner {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    @media (max-width: $lg) {
+    }
+  }
+  &__header {
+    margin-bottom: var(--gap);
+    @media (max-width: $lg) {
+    }
+  }
+  &__body {
+    display: flex;
+    padding: var(--gap-fluid);
+    flex: 1 1 0;
+    overflow: hidden;
+    @media (max-width: $lg) {
+      padding-right: var(--gap-container);
+      padding-left: var(--gap-container);
+      flex-direction: column;
+    }
+  }
+  &__aside {
+    max-width: 384rem;
+    margin-right: var(--gap-fluid);
+    flex: 0 0 384rem;
+    @media (max-width: $lg) {
+      width: 90%;
+      max-width: 320rem;
+      margin-right: 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      transition: $transition;
+      transition-property: transform, visibility, opacity;
+      z-index: 1000;
+    }
+    &:not(.is-show) {
+      @media (max-width: $lg) {
+        transform: translateX(-100vw);
+        pointer-events: none;
+        visibility: hidden;
+        opacity: 0;
+      }
+    }
+  }
+  &__main {
+    padding: var(--gap-fluid);
+    flex-grow: 1;
+    @media (max-width: $lg) {
+      background: transparent;
+      backdrop-filter: unset;
+      width: 100%;
+      margin-top: var(--gap);
+      padding: 0;
+    }
+  }
+  &__settings {
+    margin: var(--gap-fluid-);
+    padding: var(--gap-fluid);
+    flex-grow: 1;
+    @media (max-width: $lg) {
+    }
+  }
+}

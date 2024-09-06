@@ -1,0 +1,61 @@
+.examples {
+  padding: var(--gap-section-y) 0;
+  position: relative;
+  z-index: 0;
+  &__glare {
+    margin-left: 780rem;
+    top: 18%;
+    left: 50%;
+    transform: translateX(-50%) rotate(60deg) scaleY(-1);
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 60rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__list {
+    margin-bottom: var(--gap-fluid-);
+    overflow: hidden;
+    &-card {
+      margin-bottom: var(--gap-fluid);
+    }
+  }
+  &__appeal {
+    margin-top: var(--gap-fluid);
+    padding: var(--gap-fluid);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: inset 0 0 0 1px $accentColor;
+    border-radius: $radiusMd;
+    @media (max-width: $sm) {
+      flex-direction: column;
+    }
+    &-title {
+      margin: 0 var(--gap-fluid) 0 0;
+      text-transform: uppercase;
+      @media (max-width: $sm) {
+        margin: 0 0 var(--gap);
+        text-align: center;
+      }
+    }
+    &-btn {
+      min-width: 340rem;
+      flex-shrink: 0;
+      @media (max-width: $lg) {
+        min-width: 280rem;
+      }
+      @media (max-width: $md) {
+        min-width: 240rem;
+      }
+      @media (max-width: $xs) {
+        width: 100%;
+        min-width: 0;
+      }
+    }
+  }
+}

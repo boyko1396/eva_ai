@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Registration'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="site">
+      <div class="site__inner">
+        <main role="main" class="site__main">
+          <!-- login-section BEGIN -->
+          <section class="login-section">
+            <picture class="glare glare--1 login-section__glare">
+              <img src="images/bg-glare-1.svg" width="1292" height="1725">
+            </picture>
+            <div class="container container--size-md login-section__container">
+              <div class="login-block login-section__block">
+                <picture class="login-block__bg">
+                  <source
+                    srcset="images/login-block-bg.webp"
+                    type="image/webp">
+                  <img
+                    src="images/login-block-bg.jpg"
+                    alt="Попробуйте чат"
+                    width="1200"
+                    height="583">
+                </picture>
+                <div class="login-block__row">
+                  <div class="login-block__col login-block__col--content">
+                    <div class="login-block__content">
+                      <div class="reviews-rating reviews-rating--theme-accent-blur login-block__rating">
+                        <div class="reviews-rating__inner">
+                          <picture class="reviews-rating__logo">
+                            <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                          </picture>
+                          <p class="fs-1 reviews-rating__estimation">4.9</p>
+                          <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
+                          <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                        </div>
+                      </div>
+                      <div class="login-block__benefits">
+                        <div class="info-header login-block__benefits-item">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#picture"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
+                          </div>
+                        </div>
+                        <div class="info-header login-block__benefits-item">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#text"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
+                          </div>
+                        </div>
+                        <div class="info-header login-block__benefits-item">
+                          <div class="info-header__inner">
+                            <div class="info-header__media">
+                              <div class="info-header__icon">
+                                <svg class="u-icon">
+                                  <use xlink:href="images/icons/icons.svg#question-mark"></use>
+                                </svg>
+                              </div>
+                            </div>
+                            <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="login-block__col login-block__col--form">
+                    <p class="title fs-2 login-block__title">Попробуйте чат</p>
+                    <p class="login-block__subtitle">Просто пройдите короткую регистрацию</p>
+                    <form action="#" class="login-block__form">
+                      <div class="u-input login-block__form-input">
+                        <label class="u-input__label">
+                          <input type="email" name="email" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="mail@example.com">
+                        </label>
+                      </div>
+                      <div class="u-input login-block__form-input">
+                        <label class="u-input__label">
+                          <input type="password" name="password" class="u-input__el u-input__el--type-text u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Пароль">
+                        </label>
+                      </div>
+                      <div class="login-block__form-footer">
+                        <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
+                          <span class="btn__inner">
+                            <span class="btn__title">Отправить</span>
+                          </span>
+                        </button>
+                      </div>
+                    </form>
+                    <div class="u-privacy login-block__privacy">
+                      <p>Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+                    </div>
+                    <div class="sc-auth login-block__sc-auth">
+                      <p class="title fs-4 sc-auth__title">Регистрация через соц сети:</p>
+                      <ul class="sc-auth__list">
+                        <li class="sc-auth__list-item">
+                          <button type="button" class="sc-auth__list-btn">
+                            <svg class="u-icon">
+                              <use xlink:href="images/icons/icons.svg#yandex-color"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="sc-auth__list-item">
+                          <button type="button" class="sc-auth__list-btn">
+                            <svg class="u-icon">
+                              <use xlink:href="images/icons/icons.svg#vk-color"></use>
+                            </svg>
+                          </button>
+                        </li>
+                        <li class="sc-auth__list-item">
+                          <button type="button" class="sc-auth__list-btn">
+                            <svg class="u-icon">
+                              <use xlink:href="images/icons/icons.svg#google-color"></use>
+                            </svg>
+                          </button>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="login-block__router">
+                      <p class="login-block__router-title">Уже есть аккаунт?</p>
+                      <a href="login.html" class="router-btn router-btn--theme-accent login-block__router-btn">Войти ></a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!-- login-section END -->
+        </main>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

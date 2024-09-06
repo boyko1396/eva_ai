@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Chat images'
+  })
+  <body class="u-scrollbar">
+
+    <div id="root" class="eva-chat">
+      <div class="chat eva-chat__inner">
+        <div class="chat__inner">
+          <div class="chat__body">
+            @@include('html/components/header-chat.html')
+            @@include('html/components/chat-aside-left.html', {
+              'class_chat': ' ',
+              'class_images': 'is-active',
+              'class_settings': ' '
+            })
+            <main class="u-box u-box--theme-grey chat-main chat__main" role="main">
+              <div class="js-chat-body u-scrollbar u-scrollbar--offset-right chat-main__body">
+                <div class="chat-main__body-message-wrapper">
+                  <div class="u-message u-message--user chat-main__body-message">
+                    <div class="u-content u-message__content">
+                      <p>Абстрактная фигура, белый, черный и синий цвета, 3d рендер</p>
+                    </div>
+                  </div>
+                  <div class="u-message u-message--chat chat-main__body-message">
+                    <div class="u-message__action">
+                      <button type="button" class="action-btn action-btn--size-md action-btn--theme-grey u-message__action-btn" title="Скопировать">
+                        <span class="action-btn__inner">
+                          <svg class="u-icon action-btn__icon">
+                            <use xlink:href="images/icons/icons.svg#copy"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <button type="button" class="action-btn action-btn--size-md action-btn--theme-grey u-message__action-btn" title="Уточнить детали">
+                        <span class="action-btn__inner">
+                          <svg class="u-icon action-btn__icon">
+                            <use xlink:href="images/icons/icons.svg#details"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <button type="button" class="action-btn action-btn--size-md action-btn--theme-grey u-message__action-btn" title="Нравится">
+                        <span class="action-btn__inner">
+                          <svg class="u-icon action-btn__icon">
+                            <use xlink:href="images/icons/icons.svg#like"></use>
+                          </svg>
+                        </span>
+                      </button>
+                      <button type="button" class="action-btn action-btn--size-md action-btn--theme-grey u-message__action-btn" title="Не нравится">
+                        <span class="action-btn__inner">
+                          <svg class="u-icon action-btn__icon">
+                            <use xlink:href="images/icons/icons.svg#dislike"></use>
+                          </svg>
+                        </span>
+                      </button>
+                    </div>
+                    <div class="u-content u-message__content">
+                      <p>“Абстрактная фигура, белый, черный и синий цвета, 3d рендер”.</p>
+                    </div>
+                    <div class="u-message__images">
+                      <div class="u-message__images-col">
+                        <picture class="u-message__images-item">
+                          <img src="images/answer-1.svg">
+                        </picture>
+                      </div>
+                      <div class="u-message__images-col">
+                        <picture class="u-message__images-item">
+                          <img src="images/answer-1.svg">
+                        </picture>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-main__footer">
+                <div class="chat-main__footer-action">
+                  <button type="button" class="btn btn--size-semi btn--theme-grey-fill chat-main__footer-action-refresh">
+                    <span class="btn__inner">
+                      <span class="btn__icon btn__icon--dir-ltr">
+                        <svg class="u-icon action-btn__icon">
+                          <use xlink:href="images/icons/icons.svg#refresh"></use>
+                        </svg>
+                      </span>
+                      <span class="btn__title">Сгенерировать еще раз</span>
+                    </span>
+                  </button>
+                </div>
+                <form action="#" class="chat-main__message">
+                  <textarea name="message" rows="" cols="" id="message-textarea" class="js-chat-textarea u-scrollbar u-textarea u-textarea--theme-white u-textarea--size-md chat-main__message-textarea" placeholder="Напишите ваше сообщение"></textarea>
+                  <div class="chat-main__message-aside">
+                    <p class="chat-main__message-max-symbol">0/10000</p>
+                    <button type="submit" id="send-button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__message-btn-send" title="Отправить">
+                      <span class="btn-send__inner">
+                        <span class="visually-hidden btn-send__title">Отправить сообщение</span>
+                        <span class="btn-send__icon">
+                          <svg class="u-icon">
+                            <use xlink:href="images/icons/icons.svg#paper-plane"></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

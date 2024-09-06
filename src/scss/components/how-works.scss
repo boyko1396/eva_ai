@@ -1,0 +1,44 @@
+.how-works {
+  padding: var(--gap-section-y) 0;
+  position: relative;
+  z-index: 0;
+  &__glare {
+    margin-left: -640rem;
+    top: -78%;
+    left: 50%;
+    transform: translateX(-50%) rotate(-120deg);
+    @media (max-width: $lg) {
+      margin-left: -410rem;
+      top: initial;
+      bottom: -49%;
+    }
+  }
+  &__container {
+  }
+  &__title {
+    margin: 0 0 60rem;
+    text-transform: uppercase;
+    @media (max-width: $sm) {
+      font-size: var(--fs-2);
+    }
+  }
+  &__list {
+    &-row {
+      margin-bottom: var(--gap-fluid-);
+    }
+    &-col {
+      margin-bottom: var(--gap-fluid);
+      @media (max-width: $md) {
+        max-width: 50%;
+        flex-basis: 50%;
+      }
+      @media (max-width: $xs) {
+        max-width: 100%;
+        flex-basis: 100%;
+      }
+    }
+    &-card {
+      height: 100%;
+    }
+  }
+}

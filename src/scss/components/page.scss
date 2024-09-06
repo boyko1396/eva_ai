@@ -1,0 +1,27 @@
+.page {
+  padding: 24rem 0 64rem;
+  &__container {
+  }
+  &__breadcrumbs {
+    margin: 0 0 34rem;
+  }
+  &__privacy {
+    &-row {
+    }
+    &-col {
+      &--content {
+        @media (max-width: $sm) {
+          max-width: 100%;
+          flex-basis: 100%;
+        }
+      }
+    }
+  }
+  &__title {
+    margin: 0 0 20rem;
+    text-transform: uppercase;
+  }
+  &__content {
+    color: $greyNeutralColor;
+  }
+}
