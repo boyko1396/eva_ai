@@ -1190,6 +1190,7 @@
     &.is-active {
       background: $whiteColor;
       color: $accentColor;
+      pointer-events: none;
     }
   }
 }

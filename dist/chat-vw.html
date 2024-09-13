@@ -14,171 +14,450 @@
   <meta name="msapplication-TileColor" content="#a129ff">
   <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
   <meta name="theme-color" content="#a129ff">
-  <title>Eva AI - Условия использования</title>
+  <title>Eva AI - Chat</title>
 </head>
   <body class="u-scrollbar">
+    <style>
+      html {
+        @media (max-width: 767px) {
+          font-size: .27777777777vw;
+        }
+      }
+    </style>
 
-    <div id="root" class="site">
-      <div class="site__inner">
-        
-        <header class="header site__header">
-  <div class="container container--size-md header__container">
-    <a href="/" class="logo logo--size-sm header__logo">
-      <picture class="logo__img">
-        <img src="images/logo-type-1.svg" width="144" height="38" alt="Eva AI">
-      </picture>
-    </a>
-    <div class="header__dropdown">
-      <div class="d-lg-block header__dropdown-top">
-        <button type="button" class="header__dropdown-toggle js-header-toggle header__dropdown-toggle--close">
-          <svg class="u-icon">
-            <use xlink:href="images/icons/icons.svg#menu-close"></use>
-          </svg>
-        </button>
-        <a href="/" class="logo logo--size-sm header__dropdown-logo">
-          <picture class="logo__img">
-            <img src="images/logo-type-2.svg" alt="Eva AI">
-          </picture>
-        </a>
-      </div>
-      <nav class="header__nav" role="navigation">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="/#about" class="js-anchor header__nav-link">Возможности</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="/#target-audience" class="js-anchor header__nav-link">Для кого</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="/#reviews" class="js-anchor header__nav-link">Отзывы</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="/#faq" class="js-anchor header__nav-link">FAQ</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="btn-group header__btn-group">
-        <div class="btn-group__inner">
-          <div class="btn-group__col">
-            <button type="button" data-modal="popup-login" class="btn btn--size-md btn--theme-accent-outline btn-group__item">
-              <span class="btn__inner">
-                <span class="btn__title d-lg-none">Вход</span>
-                <span class="btn__title d-lg-block">Войти</span>
-              </span>
-            </button>
-          </div>
-          <div class="btn-group__col">
-            <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
-              <span class="btn__inner">
-                <span class="btn__title d-lg-none">Регистрация</span>
-                <span class="btn__title d-lg-block">Зарегистрироваться</span>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button type="button" class="d-lg-block header__dropdown-toggle header__dropdown-toggle--open js-header-toggle">
+    <div id="root" class="eva-chat">
+      <div class="chat eva-chat__inner">
+        <div class="chat__inner">
+          <div class="chat__body">
+            <header class="d-lg-block header-chat">
+  <div class="container container--size-md header-chat__container">
+    <button type="button" class="header-chat__toggle js-header-chat-toggle">
       <svg class="u-icon">
         <use xlink:href="images/icons/icons.svg#menu-open"></use>
       </svg>
     </button>
+    <a href="chat.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey header-chat__new-chat">
+      <span class="chat-btn__inner">
+        <span class="chat-btn__icon chat-btn__icon--dir-rtl">
+          <svg class="u-icon">
+            <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
+          </svg>
+        </span>
+        <span class="chat-btn__title">Новый чат</span>
+      </span>
+    </a>
   </div>
-  <div class="d-lg-block header__overlay js-header-toggle-close"></div>
+  <div class="d-lg-block header-chat__overlay js-header-chat-toggle-close"></div>
 </header>
-        
-        <main role="main" class="site__main">
-          
-          <section class="page">
-            <div class="container container--size-md page__container">
-              <div class="page__breadcrumbs u-breadcrumbs">
-                <ul class="u-breadcrumbs__list" itemscope itemtype="https://schema.org/BreadcrumbList">
-                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <a href="/" itemprop="item">
-                      <span itemprop="name">Главная</span>
-                    </a>
-                    <meta itemprop="position" content="1">
-                  </li>
-                  <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                    <span itemprop="name">Условия использования</span>
-                    <meta itemprop="position" content="2">
-                  </li>
-                </ul>
-              </div>
-              <div class="page__privacy">
-                <div class="row page__privacy-row">
-                  <div class="page__privacy-col page__privacy-col--content row__col--10">
-                    <h1 class="fs-2 page__title">Условия использования</h1>
-                    <div class="page__content u-content">
-                      <p>Добро пожаловать на сайт EVA AI, предоставляющий услуги генерации текстов, сочинений и рефератов. Настоящие Условия использования регулируют ваше использование нашего сайта. Продолжая использовать наш сервис, вы соглашаетесь с условиями, описанными ниже.<br>1. Пользование сервисом<br>1.1. Вы обязуетесь использовать наш сервис только в законных целях и соблюдать все применимые законы и нормы.<br>1.2. Вы соглашаетесь не использовать наш сервис для распространения вредоносного программного обеспечения или любой другой незаконной активности.<br>2. Регистрация и учетные записи<br>2.1. Для доступа к определенным функциям нашего сайта может потребоваться регистрация учетной записи.<br>2.2. Вы несете ответственность за сохранение конфиденциальности данных вашей учетной записи и пароля.<br>3. Интеллектуальная собственность<br>3.1. Все материалы, размещенные на нашем сайте, являются нашей интеллектуальной собственностью и защищены авторскими правами.<br>3.2. Вы не имеете права копировать, изменять, распространять или использовать материалы без нашего разрешения.<br>4. Ограничение ответственности<br>4.1. Мы предоставляем наш сервис «как есть» и не гарантируем его бесперебойную работу.<br>4.2. Мы не несем ответственности за любой ущерб, который может возникнуть в результате использования или невозможности использования нашего сервиса.<br>5. Изменения в Условиях использования<br>5.1. Мы оставляем за собой право вносить изменения в данные Условия использования в любое время.<br>5.2. Продолжение использования нашего сервиса после внесения изменений означает ваше согласие с обновленными Условиями.<br>6. Прекращение использования<br>6.1. Мы оставляем за собой право прекратить или приостановить доступ к нашему сервису без предварительного уведомления, если вы нарушаете данные Условия.<br>6.2. Вы можете прекратить использование нашего сервиса в любое время, удалив свою учетную запись.<br>7. Контактная информация<br>Если у вас возникли вопросы по поводу наших Условий использования, пожалуйста, свяжитесь с нами через форму обратной связи на сайте.<br>Наши Условия использования вступают в силу с момента их публикации на нашем сайте и действуют до их изменения или отмены.</p>
-                    </div>
+            <aside class="chat-aside chat__aside">
+  <div class="u-box u-box--theme-grey chat-aside__header">
+    <a href="chat.html" class="chat-aside__header-logo">
+      <picture class="d-lg-none chat-aside__header-logo-picture">
+        <img src="images/logo-type-4.svg" width="38" height="38" alt="Eva AI">
+      </picture>
+      <picture class="d-lg-block chat-aside__header-logo-picture">
+        <img src="images/logo-type-2.svg" width="144" height="38" alt="Eva AI">
+      </picture>
+    </a>
+    <a href="chat.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey chat-aside__header-btn d-lg-none">
+      <span class="chat-btn__inner">
+        <span class="chat-btn__icon chat-btn__icon--dir-rtl">
+          <svg class="u-icon">
+            <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
+          </svg>
+        </span>
+        <span class="chat-btn__title">Новый чат</span>
+      </span>
+    </a>
+    <button type="button" class="d-lg-block js-chat-aside-toggle-close chat-aside__header-toggle">
+      <svg class="u-icon">
+        <use xlink:href="images/icons/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="u-box u-box--theme-grey chat-aside__body">
+    <div class="u-box u-box--theme-grey tab-nav chat-aside__body-tab-nav">
+      <ul class="tab-nav__list">
+        <li class="tab-nav__item">
+          <button type="button" class="tab-nav__btn is-active" data-tab-nav-aside="aside-tools">Инструменты</button>
+        </li>
+        <li class="tab-nav__item">
+          <button type="button" class="tab-nav__btn" data-tab-nav-aside="aside-history">История</button>
+        </li>
+      </ul>
+    </div>
+    <div class="chat-aside__body-inner">
+      <div class="chat-aside__tab-content is-show" data-tab-content-aside="aside-tools">
+        <nav class="u-scrollbar chat-aside__nav" role="navigation">
+          <ul class="chat-aside__nav-list">
+            <li class="chat-aside__nav-item">
+              <a href="chat_template.html" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#edit-square"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Чат с GPT</span>
+                </span>
+              </a>
+            </li>
+            <li class="chat-aside__nav-item">
+              <a href="chat_images_1.html" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#picture"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Генератор изображений</span>
+                </span>
+              </a>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-download-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#file-plus"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Загрузи и&nbsp;спроси</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-youtube-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#video-youtube"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">YouTube и&nbsp;спроси</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-youtube" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#video"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Краткое содержание видео</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-article" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#text"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Краткое содержание статьи</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-link-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#attach"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Вставь ссылку и&nbsp;спроси</span>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="chat-aside__tab-content" data-tab-content-aside="aside-history">
+        <div class="u-box u-box--theme-grey tab-nav chat-aside__body-tab-content" data-tab-content-aside="aside-history">
+          <ul class="tab-nav__list">
+            <li class="tab-nav__item">
+              <button type="button" class="tab-nav__btn is-active" data-subtab-nav-aside="aside-history-chat">Чаты</button>
+            </li>
+            <li class="tab-nav__item">
+              <button type="button" class="tab-nav__btn" data-subtab-nav-aside="aside-history-tools">Инструменты</button>
+            </li>
+          </ul>
+        </div>
+        <div class="u-scrollbar chat-aside__subtab-content is-show" data-subtab-content-aside="aside-history-chat">
+          <div class="chat-aside__body-history">
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Составь контент-план для блогера, который ведет лайф-контент, есть...</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
                   </div>
                 </div>
               </div>
             </div>
-          </section>
-          
-        </main>
-        
-        <footer class="footer site__footer">
-  <div class="container container--size-md footer__container">
-    <div class="row footer__row">
-      <div class="footer__row-col row__col footer__row-col--logo">
-        <a href="/" class="logo logo--size-sm footer__logo">
-          <picture class="logo__img">
-            <img src="images/logo-type-2.svg" width="144" height="38" alt="Eva AI">
-          </picture>
-        </a>
-      </div>
-      <div class="footer__row-col row__col footer__row-col--nav">
-        <nav class="footer__nav" role="navigation">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <p class="footer__nav-title">Сайт</p>
-            </li>
-            <li class="footer__nav-item">
-              <a href="/#about" class="footer__nav-link js-anchor">Возможности</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="/#target-audience" class="footer__nav-link js-anchor">Для кого</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="/#reviews" class="footer__nav-link js-anchor">Отзывы</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="/#faq" class="footer__nav-link js-anchor">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__row-col row__col footer__row-col--nav">
-        <nav class="footer__nav" role="navigation">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <p class="footer__nav-title">Помощь</p>
-            </li>
-            <li class="footer__nav-item">
-              <a href="contacts.html" class="footer__nav-link">Контакты</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="privacy.html" class="footer__nav-link">Политика конфиденциальности</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="terms.html" class="footer__nav-link">Условия использования</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="offer.html" class="footer__nav-link">Договор оферты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="footer__row-col row__col footer__row-col--copyright">
-        <p class="footer__copyright">© 2024 EVa AI.&nbsp;<br class="d-md-none">Все права защищены</p>
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Составь контент-план для блогера, который ведет лайф-контент, есть...</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Составь контент-план для блогера, который ведет лайф-контент, есть...</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Составь контент-план для блогера, который ведет лайф-контент, есть...</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="u-scrollbar chat-aside__subtab-content" data-subtab-content-aside="aside-history-tools">
+          <div class="chat-aside__body-history">
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__suptitle">Генерация изображений</p>
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Дизайн-макет сайта для интернет-магазина по продаже техники</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__suptitle">YouTube и спроси</p>
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Выпиши все даты, которые называет автор  в хронологическом порядке</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__suptitle">Загрузи и спроси</p>
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Напиши оглавление к эссе</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="chat-aside__body-history-card history-item">
+              <div class="history-item__inner">
+                <p class="history-item__suptitle">Генерация изображений</p>
+                <p class="history-item__title">
+                  <a href="#" class="history-item__link">Дизайн-макет сайта для интернет-магазина по продаже техники</a>
+                </p>
+                <div class="history-item__footer">
+                  <time class="history-item__date">12 апреля</time>
+                  <div class="history-item__action">
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#edit"></use>
+                      </svg>
+                    </button>
+                    <button type="button" class="history-item__action-btn">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#delete"></use>
+                      </svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-</footer>
-        
+  <div class="u-box u-box--theme-grey chat-aside__footer">
+    <a href="chat_settings.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey chat-aside__footer-btn">
+      <span class="chat-btn__inner">
+        <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+          <svg class="u-icon">
+            <use xlink:href="images/icons/icons.svg#settings-type-2"></use>
+          </svg>
+        </span>
+        <span class="chat-btn__title">Настройки</span>
+      </span>
+    </a>
+  </div>
+  <div class="d-lg-block js-chat-aside-toggle-close chat-aside__overlay"></div>
+</aside>
+            <main class="u-box u-box--theme-grey chat-main chat__main" role="main">
+              <div class="u-scrollbar chat-main__body js-chat-body u-scrollbar--offset-right">
+                <p class="chat-main__body-appeal">Привет, жаждущий исследователь! Приготовьтесь открыть для себя увлекательные открытия и расширить горизонты своего понимания.</p>
+                <div class="chat-main__body-hint">
+                  <div class="chat-main__body-hint-list">
+                    <button type="button" class="chat-main__body-hint-btn hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Контент-план для блогера из&nbsp;сферы...</span>
+                      </span>
+                    </button>
+                    <button type="button" class="chat-main__body-hint-btn hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Скрипт на Python&nbsp;<br class="d-xs-none">для парсинга</span>
+                      </span>
+                    </button>
+                    <button type="button" class="chat-main__body-hint-btn hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Расскажи&nbsp;<br class="d-xs-none">про&nbsp;черные дыры</span>
+                      </span>
+                    </button>
+                    <button type="button" class="chat-main__body-hint-btn hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Напиши меню&nbsp;<br class="d-xs-none">на&nbsp;неделю</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-main__footer">
+                <div class="chat-main__footer-action">
+                  <div class="chat-main__footer-action-version chat-version chat-version--size-md chat-version--theme-grey js-chat-version">
+                    <div class="chat-version__inner">
+                      <div class="chat-version__dropdown">
+                        <button type="button" data-version="3.5" class="chat-version__dropdown-btn js-chat-version-switch">GPT-3.5</button>
+                        <button type="button" data-version="4o" class="is-active chat-version__dropdown-btn js-chat-version-switch">GPT-4o</button>
+                      </div>
+                      <button type="button" class="chat-version__toggle js-chat-version-toggle">
+                        <svg class="u-icon chat-version__toggle-icon">
+                          <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                        </svg>
+                        <span class="chat-version__toggle-title"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <form action="#" class="chat-main__message">
+                  <textarea name="message" rows="" cols="" id="message-textarea" class="u-scrollbar chat-main__message-textarea js-chat-textarea u-textarea u-textarea--size-md u-textarea--theme-white" placeholder="Напишите ваше сообщение"></textarea>
+                  <div class="chat-main__message-aside">
+                    <p class="chat-main__message-max-symbol">0/10000</p>
+                    <button type="submit" id="send-button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__message-btn-send" title="Отправить">
+                      <span class="btn-send__inner">
+                        <span class="btn-send__title visually-hidden">Отправить сообщение</span>
+                        <span class="btn-send__icon">
+                          <svg class="u-icon">
+                            <use xlink:href="images/icons/icons.svg#paper-plane"></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </main>
+          </div>
+        </div>
       </div>
       <div class="u-scrollbar popup" data-popup="popup-login" data-close-overlay>
   <div class="popup__wrapper" data-close-overlay>
@@ -566,7 +845,7 @@
             </div>
             <div class="u-input popup__chat-form-message">
               <label class="u-input__label">
-                <textarea name="message" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea u-scrollbar" required style="min-height: 124rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
+                <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 124rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
               </label>
             </div>
             <footer class="popup__chat-form-footer">
@@ -608,7 +887,7 @@
             </div>
             <div class="u-input popup__chat-form-message">
               <label class="u-input__label">
-                <textarea name="message" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea u-scrollbar" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
+                <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
               </label>
             </div>
             <footer class="popup__chat-form-footer">
@@ -650,7 +929,7 @@
             </div>
             <div class="u-input popup__chat-form-message">
               <label class="u-input__label">
-                <textarea name="message" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea u-scrollbar" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
+                <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
               </label>
             </div>
             <footer class="popup__chat-form-footer">

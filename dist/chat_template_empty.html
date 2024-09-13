@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="ru">
-<head>
+  <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="css/style.min.css??=v=20240906124229">
+  <link rel="stylesheet" href="css/style.min.css??=v=20240913183654">
   <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
@@ -16,1000 +16,920 @@
   <meta name="theme-color" content="#a129ff">
   <title>Eva AI - Chat template</title>
 </head>
-<body class="u-scrollbar">
+  <body class="u-scrollbar">
 
-  <div id="root" class="eva-chat">
-    <div class="chat eva-chat__inner">
-      <div class="chat__inner">
-        <div class="chat__body">
-          <header class="d-lg-block header-chat">
-            <div class="container container--size-md header-chat__container">
-              <button type="button" class="header-chat__toggle js-header-chat-toggle">
-                <svg class="u-icon">
-                  <use xlink:href="images/icons/icons.svg#menu-open"></use>
-                </svg>
-              </button>
-              <a href="chat.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey header-chat__new-chat">
-                <span class="chat-btn__inner">
-                  <span class="chat-btn__icon chat-btn__icon--dir-rtl">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
-                    </svg>
-                  </span>
-                  <span class="chat-btn__title">Новый чат</span>
-                </span>
-              </a>
-            </div>
-            <div class="d-lg-block header-chat__overlay js-header-chat-toggle-close"></div>
-          </header>
-          <aside class="chat-aside chat__aside">
-            <div class="u-box u-box--theme-grey chat-aside__header">
-              <a href="chat.html" class="chat-aside__header-logo">
-                <picture class="d-lg-none chat-aside__header-logo-picture">
-                  <img src="images/logo-type-4.svg" width="38" height="38" alt="Eva AI"></picture>
-                <picture class="d-lg-block chat-aside__header-logo-picture">
-                  <img src="images/logo-type-2.svg" width="144" height="38" alt="Eva AI"></picture>
-              </a>
-              <a href="chat.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey chat-aside__header-btn d-lg-none">
-                <span class="chat-btn__inner">
-                  <span class="chat-btn__icon chat-btn__icon--dir-rtl">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
-                    </svg>
-                  </span>
-                  <span class="chat-btn__title">Новый чат</span>
-                </span>
-              </a>
-              <button type="button" class="d-lg-block js-chat-aside-toggle-close chat-aside__header-toggle">
-                <svg class="u-icon">
-                  <use xlink:href="images/icons/icons.svg#menu-close"></use>
-                </svg>
-              </button>
-            </div>
-            <div class="u-box u-box--theme-grey chat-aside__body">
-              <div class="u-box u-box--theme-grey tab-nav chat-aside__body-tab-nav">
-                <ul class="tab-nav__list">
-                  <li class="tab-nav__item">
-                    <button type="button" class="is-active tab-nav__btn" data-tab-nav-aside="aside-tools">Инструменты</button>
-                  </li>
-                  <li class="tab-nav__item">
-                    <button type="button" class="tab-nav__btn" data-tab-nav-aside="aside-history">История</button>
-                  </li>
-                </ul>
-              </div>
-              <div class="chat-aside__body-inner">
-                <div class="chat-aside__tab-content is-show" data-tab-content-aside="aside-tools">
-                  <nav class="u-scrollbar chat-aside__nav" role="navigation">
-                    <ul class="chat-aside__nav-list">
-                      <li class="chat-aside__nav-item">
-                        <a href="chat_template.html" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline is-active">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#edit-square"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">Чат с GPT</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="chat-aside__nav-item">
-                        <a href="chat_images_1.html" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#picture"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">Генератор изображений</span>
-                          </span>
-                        </a>
-                      </li>
-                      <li class="chat-aside__nav-item">
-                        <button type="button" data-modal="popup-chat-download-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#file-plus"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">Загрузи и&nbsp;спроси</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li class="chat-aside__nav-item">
-                        <button type="button" data-modal="popup-chat-youtube-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#video-youtube"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">YouTube и&nbsp;спроси</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li class="chat-aside__nav-item">
-                        <button type="button" data-modal="popup-chat-youtube" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#video"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">Краткое содержание видео</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li class="chat-aside__nav-item">
-                        <button type="button" data-modal="popup-chat-article" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#text"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">Краткое содержание статьи</span>
-                          </span>
-                        </button>
-                      </li>
-                      <li class="chat-aside__nav-item">
-                        <button type="button" data-modal="popup-chat-link-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
-                          <span class="chat-btn__inner">
-                            <span class="chat-btn__icon chat-btn__icon--dir-ltr">
-                              <svg class="u-icon">
-                                <use xlink:href="images/icons/icons.svg#attach"></use>
-                              </svg>
-                            </span>
-                            <span class="chat-btn__title">Вставь ссылку и&nbsp;спроси</span>
-                          </span>
-                        </button>
-                      </li>
-                    </ul>
-                  </nav>
-                </div>
-                <div class="chat-aside__tab-content" data-tab-content-aside="aside-history">
-                  <div class="u-box u-box--theme-grey tab-nav chat-aside__body-tab-content" data-tab-content-aside="aside-history">
-                    <ul class="tab-nav__list">
-                      <li class="tab-nav__item">
-                        <button type="button" class="is-active tab-nav__btn" data-subtab-nav-aside="aside-history-chat">Чаты</button>
-                      </li>
-                      <li class="tab-nav__item">
-                        <button type="button" class="tab-nav__btn" data-subtab-nav-aside="aside-history-tools">Инструменты</button>
-                      </li>
-                    </ul>
-                  </div>
-                  <div class="u-scrollbar chat-aside__subtab-content is-show" data-subtab-content-aside="aside-history-chat">
-                    <div class="chat-aside__body-history">
-                      <p class="title fs-4 chat-aside__body-history-empty">У вас нет начатых чатов</p>
-                    </div>
-                  </div>
-                  <div class="u-scrollbar chat-aside__subtab-content" data-subtab-content-aside="aside-history-tools">
-                    <div class="chat-aside__body-history">
-                      <p class="title fs-4 chat-aside__body-history-empty">У вас нет начатых чатов</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="u-box u-box--theme-grey chat-aside__footer">
-              <a href="chat_settings.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey chat-aside__footer-btn">
+    <div id="root" class="eva-chat">
+      <div class="chat eva-chat__inner">
+        <div class="chat__inner">
+          <div class="chat__body">
+            <header class="d-lg-block header-chat">
+  <div class="container container--size-md header-chat__container">
+    <button type="button" class="header-chat__toggle js-header-chat-toggle">
+      <svg class="u-icon">
+        <use xlink:href="images/icons/icons.svg#menu-open"></use>
+      </svg>
+    </button>
+    <a href="chat.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey header-chat__new-chat">
+      <span class="chat-btn__inner">
+        <span class="chat-btn__icon chat-btn__icon--dir-rtl">
+          <svg class="u-icon">
+            <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
+          </svg>
+        </span>
+        <span class="chat-btn__title">Новый чат</span>
+      </span>
+    </a>
+  </div>
+  <div class="d-lg-block header-chat__overlay js-header-chat-toggle-close"></div>
+</header>
+            <aside class="chat-aside chat__aside">
+  <div class="u-box u-box--theme-grey chat-aside__header">
+    <a href="chat.html" class="chat-aside__header-logo">
+      <picture class="d-lg-none chat-aside__header-logo-picture">
+        <img src="images/logo-type-4.svg" width="38" height="38" alt="Eva AI">
+      </picture>
+      <picture class="d-lg-block chat-aside__header-logo-picture">
+        <img src="images/logo-type-2.svg" width="144" height="38" alt="Eva AI">
+      </picture>
+    </a>
+    <a href="chat.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey chat-aside__header-btn d-lg-none">
+      <span class="chat-btn__inner">
+        <span class="chat-btn__icon chat-btn__icon--dir-rtl">
+          <svg class="u-icon">
+            <use xlink:href="images/icons/icons.svg#plus-type-2"></use>
+          </svg>
+        </span>
+        <span class="chat-btn__title">Новый чат</span>
+      </span>
+    </a>
+    <button type="button" class="d-lg-block js-chat-aside-toggle-close chat-aside__header-toggle">
+      <svg class="u-icon">
+        <use xlink:href="images/icons/icons.svg#menu-close"></use>
+      </svg>
+    </button>
+  </div>
+  <div class="u-box u-box--theme-grey chat-aside__body">
+    <div class="u-box u-box--theme-grey tab-nav chat-aside__body-tab-nav">
+      <ul class="tab-nav__list">
+        <li class="tab-nav__item">
+          <button type="button" class="is-active tab-nav__btn" data-tab-nav-aside="aside-tools">Инструменты</button>
+        </li>
+        <li class="tab-nav__item">
+          <button type="button" class="tab-nav__btn" data-tab-nav-aside="aside-history">История</button>
+        </li>
+      </ul>
+    </div>
+    <div class="chat-aside__body-inner">
+      <div class="chat-aside__tab-content is-show" data-tab-content-aside="aside-tools">
+        <nav class="u-scrollbar chat-aside__nav" role="navigation">
+          <ul class="chat-aside__nav-list">
+            <li class="chat-aside__nav-item">
+              <a href="chat_template.html" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline is-active">
                 <span class="chat-btn__inner">
                   <span class="chat-btn__icon chat-btn__icon--dir-ltr">
                     <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#settings-type-2"></use>
+                      <use xlink:href="images/icons/icons.svg#edit-square"></use>
                     </svg>
                   </span>
-                  <span class="chat-btn__title">Настройки</span>
+                  <span class="chat-btn__title">Чат с GPT</span>
                 </span>
               </a>
-            </div>
-            <div class="d-lg-block js-chat-aside-toggle-close chat-aside__overlay"></div>
-          </aside>
-          <main class="u-box u-box--theme-grey chat-main chat__main" role="main">
-            <div class="u-scrollbar chat-main__body js-chat-body u-scrollbar--offset-right">
-              <div class="chat-main__body-message-wrapper">
-                <div class="chat-main__body-message u-message u-message--size-lg u-message--user">
-                  <div class="u-content u-message__content">
-                    <p>Напиши меню на неделю</p>
-                  </div>
-                </div>
-                <div class="chat-main__body-message u-message u-message--size-lg u-message--chat">
-                  <div class="u-content u-message__content">
-                    <p>Конечно! Вот примерное меню на неделю:</p>
-                    <p> <strong class="fs-percent-112">Понедельник:</strong>
-                    </p>
-                    <p> <strong>Завтрак:</strong>
-                      Омлет с овощами и тост.
-                      <br>
-                      <strong>Обед:</strong>
-                      Куриный суп с лапшой.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Рыба, запеченная с лимоном и зеленью, с картофельным пюре.
-                    </p>
-                    <p>
-                      <strong class="fs-percent-112">Вторник:</strong>
-                    </p>
-                    <p>
-                      <strong>Завтрак:</strong>
-                      Овсянка с фруктами и медом.
-                      <br>
-                      <strong>Обед:</strong>
-                      Греческий салат и куриные шашлычки.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Паста с соусом Болоньезе и пармезаном.
-                    </p>
-                    <p>
-                      <strong class="fs-percent-112">Среда:</strong>
-                    </p>
-                    <p>
-                      <strong>Завтрак:</strong>
-                      Йогурт с мюсли и ягодами.
-                      <br>
-                      <strong>Обед:</strong>
-                      Овощное рагу с кусочками говядины.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Куриное филе в кефирном соусе с рисом.
-                    </p>
-                    <p>
-                      <strong class="fs-percent-112">Четверг:</strong>
-                    </p>
-                    <p>
-                      <strong>Завтрак:</strong>
-                      Блины с творогом и вареньем.
-                      <br>
-                      <strong>Обед:</strong>
-                      Суп-пюре из тыквы с сухариками.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Свинина в кисло-сладком соусе с овощами и рисом.
-                    </p>
-                    <p>
-                      <strong class="fs-percent-112">Пятница:</strong>
-                    </p>
-                    <p>
-                      <strong>Завтрак:</strong>
-                      Гречневая каша с молоком и орехами.
-                      <br>
-                      <strong>Обед:</strong>
-                      Салат Цезарь с курицей.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Лазанья с сыром и томатным соусом.
-                    </p>
-                    <p>
-                      <strong class="fs-percent-112">Суббота:</strong>
-                    </p>
-                    <p>
-                      <strong>Завтрак:</strong>
-                      Смузи с бананом, шпинатом и йогуртом.
-                      <br>
-                      <strong>Обед:</strong>
-                      Борщ со сметаной и чесночными пампушками.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Шашлык с овощами на гриле и картофельные дольки.
-                    </p>
-                    <p>
-                      <strong class="fs-percent-112">Воскресенье:</strong>
-                    </p>
-                    <p>
-                      <strong>Завтрак:</strong>
-                      Сырники с медом и сметаной.
-                      <br>
-                      <strong>Обед:</strong>
-                      Окрошка на квасе или кефире.
-                      <br>
-                      <strong>Ужин:</strong>
-                      Запеченная курица с овощами и зеленым салатом.
-                    </p>
-                    <p>Приятного аппетита</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="chat-main__footer">
-              <div class="chat-main__footer-action">
-                <div class="chat-main__footer-action-version chat-version chat-version--size-md chat-version--theme-grey js-chat-version">
-                  <div class="chat-version__inner">
-                    <div class="chat-version__dropdown">
-                      <button type="button" data-version="3.5" class="chat-version__dropdown-btn js-chat-version-switch">GPT-3.5</button>
-                      <button type="button" data-version="4o" class="is-active chat-version__dropdown-btn js-chat-version-switch">GPT-4o</button>
-                    </div>
-                    <button type="button" class="chat-version__toggle js-chat-version-toggle">
-                      <svg class="u-icon chat-version__toggle-icon">
-                        <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
-                      </svg>
-                      <span class="chat-version__toggle-title"></span>
-                    </button>
-                  </div>
-                </div>
-              </div>
-              <form action="#" class="chat-main__message">
-                <textarea name="message" rows="" cols="" id="message-textarea" class="u-scrollbar chat-main__message-textarea js-chat-textarea u-textarea u-textarea--size-md u-textarea--theme-white" placeholder="Напишите ваше сообщение"></textarea>
-                <div class="chat-main__message-aside">
-                  <p class="chat-main__message-max-symbol">0/10000</p>
-                  <button type="submit" id="send-button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__message-btn-send" title="Отправить">
-                    <span class="btn-send__inner">
-                      <span class="btn-send__title visually-hidden">Отправить сообщение</span>
-                      <span class="btn-send__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#paper-plane"></use>
-                        </svg>
-                      </span>
-                    </span>
-                  </button>
-                </div>
-              </form>
-            </div>
-          </main>
-        </div>
+            </li>
+            <li class="chat-aside__nav-item">
+              <a href="chat_images_1.html" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#picture"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Генератор изображений</span>
+                </span>
+              </a>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-download-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#file-plus"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Загрузи и&nbsp;спроси</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-youtube-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#video-youtube"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">YouTube и&nbsp;спроси</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-youtube" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#video"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Краткое содержание видео</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-article" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#text"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Краткое содержание статьи</span>
+                </span>
+              </button>
+            </li>
+            <li class="chat-aside__nav-item">
+              <button type="button" data-modal="popup-chat-link-ask" class="chat-btn chat-btn--size-md chat-aside__nav-btn chat-btn--theme-grey-outline">
+                <span class="chat-btn__inner">
+                  <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#attach"></use>
+                    </svg>
+                  </span>
+                  <span class="chat-btn__title">Вставь ссылку и&nbsp;спроси</span>
+                </span>
+              </button>
+            </li>
+          </ul>
+        </nav>
       </div>
-    </div>
-    <div class="u-scrollbar popup" data-popup="popup-login" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner login-block">
-            <picture class="login-block__bg">
-              <source srcset="images/login-block-bg.webp" type="image/webp">
-              <img src="images/login-block-bg.jpg" alt="Войдите в свой аккаунт" width="1200" height="583"></picture>
-            <div class="login-block__row">
-              <div class="login-block__col login-block__col--content">
-                <div class="login-block__content">
-                  <div class="login-block__rating reviews-rating reviews-rating--theme-accent-blur">
-                    <div class="reviews-rating__inner">
-                      <picture class="reviews-rating__logo">
-                        <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI"></picture>
-                      <p class="fs-1 reviews-rating__estimation">4.9</p>
-                      <div class="reviews-rating__rating u-rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
-                      <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
-                    </div>
-                  </div>
-                  <div class="login-block__benefits">
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#picture"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
-                      </div>
-                    </div>
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#text"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
-                      </div>
-                    </div>
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#question-mark"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="login-block__col login-block__col--form">
-                <p class="title fs-2 login-block__title">Войдите в&nbsp;свой аккаунт</p>
-                <p class="login-block__subtitle">Пользуйтесь возможностями нашего ИИ</p>
-                <form action="#" class="login-block__form">
-                  <div class="u-input login-block__form-input">
-                    <label class="u-input__label">
-                      <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com"></label>
-                  </div>
-                  <div class="u-input login-block__form-input">
-                    <label class="u-input__label">
-                      <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль"></label>
-                  </div>
-                  <div class="login-block__form-footer">
-                    <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
-                      <span class="btn__inner">
-                        <span class="btn__title">Войти</span>
-                      </span>
-                    </button>
-                    <div class="login-block__form-footer-aside">
-                      <button type="button" data-modal="popup-forgot" class="router-btn router-btn--theme-accent login-block__form-footer-aside-forgot">Забыли пароль? ></button>
-                    </div>
-                  </div>
-                </form>
-                <div class="login-block__privacy u-privacy">
-                  <p>
-                    Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими
-                    <a href="terms.html" target="_blank">Условиями использования</a>
-                    и&nbsp;
-                    <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
-                  </p>
-                </div>
-                <div class="login-block__sc-auth sc-auth">
-                  <p class="title fs-4 sc-auth__title">Вход через соц сети:</p>
-                  <ul class="sc-auth__list">
-                    <li class="sc-auth__list-item">
-                      <button type="button" class="sc-auth__list-btn">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#yandex-color"></use>
-                        </svg>
-                      </button>
-                    </li>
-                    <li class="sc-auth__list-item">
-                      <button type="button" class="sc-auth__list-btn">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#vk-color"></use>
-                        </svg>
-                      </button>
-                    </li>
-                    <li class="sc-auth__list-item">
-                      <button type="button" class="sc-auth__list-btn">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#google-color"></use>
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="login-block__router">
-                  <p class="login-block__router-title">Нет аккаунта?</p>
-                  <button type="button" data-modal="popup-registration" class="router-btn router-btn--theme-accent login-block__router-btn">Зарегистрироваться ></button>
-                </div>
-              </div>
-            </div>
+      <div class="chat-aside__tab-content" data-tab-content-aside="aside-history">
+        <div class="u-box u-box--theme-grey tab-nav chat-aside__body-tab-content" data-tab-content-aside="aside-history">
+          <ul class="tab-nav__list">
+            <li class="tab-nav__item">
+              <button type="button" class="is-active tab-nav__btn" data-subtab-nav-aside="aside-history-chat">Чаты</button>
+            </li>
+            <li class="tab-nav__item">
+              <button type="button" class="tab-nav__btn" data-subtab-nav-aside="aside-history-tools">Инструменты</button>
+            </li>
+          </ul>
+        </div>
+        <div class="u-scrollbar chat-aside__subtab-content is-show" data-subtab-content-aside="aside-history-chat">
+          <div class="chat-aside__body-history">
+            <p class="title fs-4 chat-aside__body-history-empty">У вас нет начатых чатов</p>
+          </div>
+        </div>
+        <div class="u-scrollbar chat-aside__subtab-content" data-subtab-content-aside="aside-history-tools">
+          <div class="chat-aside__body-history">
+            <p class="title fs-4 chat-aside__body-history-empty">У вас нет начатых чатов</p>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-registration" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner login-block">
-            <picture class="login-block__bg">
-              <source srcset="images/login-block-bg.webp" type="image/webp">
-              <img src="images/login-block-bg.jpg" alt="Попробуйте чат" width="1200" height="583"></picture>
-            <div class="login-block__row">
-              <div class="login-block__col login-block__col--content">
-                <div class="login-block__content">
-                  <div class="login-block__rating reviews-rating reviews-rating--theme-accent-blur">
-                    <div class="reviews-rating__inner">
-                      <picture class="reviews-rating__logo">
-                        <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI"></picture>
-                      <p class="fs-1 reviews-rating__estimation">4.9</p>
-                      <div class="reviews-rating__rating u-rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
-                      <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+  </div>
+  <div class="u-box u-box--theme-grey chat-aside__footer">
+    <a href="chat_settings.html" class="chat-btn chat-btn--size-md chat-btn--theme-grey chat-aside__footer-btn">
+      <span class="chat-btn__inner">
+        <span class="chat-btn__icon chat-btn__icon--dir-ltr">
+          <svg class="u-icon">
+            <use xlink:href="images/icons/icons.svg#settings-type-2"></use>
+          </svg>
+        </span>
+        <span class="chat-btn__title">Настройки</span>
+      </span>
+    </a>
+  </div>
+  <div class="d-lg-block js-chat-aside-toggle-close chat-aside__overlay"></div>
+</aside>
+            <main class="u-box u-box--theme-grey chat-main chat__main" role="main">
+              <div class="u-scrollbar chat-main__body js-chat-body u-scrollbar--offset-right">
+                <div class="chat-main__body-message-wrapper">
+                  <div class="chat-main__body-message u-message u-message--size-lg u-message--user">
+                    <div class="u-content u-message__content">
+                      <p>Напиши меню на неделю</p>
                     </div>
                   </div>
-                  <div class="login-block__benefits">
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#picture"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
-                      </div>
-                    </div>
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#text"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
-                      </div>
-                    </div>
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#question-mark"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
-                      </div>
+                  <div class="chat-main__body-message u-message u-message--size-lg u-message--chat">
+                    <div class="u-content u-message__content">
+                      <p>Конечно! Вот примерное меню на неделю:</p>
+                      <p><strong class="fs-percent-112">Понедельник:</strong></p>
+                      <p><strong>Завтрак:</strong> Омлет с овощами и тост.<br><strong>Обед:</strong> Куриный суп с лапшой.<br><strong>Ужин:</strong> Рыба, запеченная с лимоном и зеленью, с картофельным пюре.</p>
+                      <p><strong class="fs-percent-112">Вторник:</strong></p>
+                      <p><strong>Завтрак:</strong> Овсянка с фруктами и медом.<br><strong>Обед:</strong> Греческий салат и куриные шашлычки.<br><strong>Ужин:</strong> Паста с соусом Болоньезе и пармезаном.</p>
+                      <p><strong class="fs-percent-112">Среда:</strong></p>
+                      <p><strong>Завтрак:</strong> Йогурт с мюсли и ягодами.<br><strong>Обед:</strong> Овощное рагу с кусочками говядины.<br><strong>Ужин:</strong> Куриное филе в кефирном соусе с рисом.</p>
+                      <p><strong class="fs-percent-112">Четверг:</strong></p>
+                      <p><strong>Завтрак:</strong> Блины с творогом и вареньем.<br><strong>Обед:</strong> Суп-пюре из тыквы с сухариками.<br><strong>Ужин:</strong> Свинина в кисло-сладком соусе с овощами и рисом.</p>
+                      <p><strong class="fs-percent-112">Пятница:</strong></p>
+                      <p><strong>Завтрак:</strong> Гречневая каша с молоком и орехами.<br><strong>Обед:</strong> Салат Цезарь с курицей.<br><strong>Ужин:</strong> Лазанья с сыром и томатным соусом.</p>
+                      <p><strong class="fs-percent-112">Суббота:</strong></p>
+                      <p><strong>Завтрак:</strong> Смузи с бананом, шпинатом и йогуртом.<br><strong>Обед:</strong> Борщ со сметаной и чесночными пампушками.<br><strong>Ужин:</strong> Шашлык с овощами на гриле и картофельные дольки.</p>
+                      <p><strong class="fs-percent-112">Воскресенье:</strong></p>
+                      <p><strong>Завтрак:</strong> Сырники с медом и сметаной.<br><strong>Обед:</strong> Окрошка на квасе или кефире.<br><strong>Ужин:</strong> Запеченная курица с овощами и зеленым салатом.</p>
+                      <p>Приятного аппетита</p>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="login-block__col login-block__col--form">
-                <p class="title fs-2 login-block__title">Попробуйте чат</p>
-                <p class="login-block__subtitle">Просто пройдите короткую регистрацию</p>
-                <form action="#" class="login-block__form">
-                  <div class="u-input login-block__form-input">
-                    <label class="u-input__label">
-                      <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com"></label>
-                  </div>
-                  <div class="u-input login-block__form-input">
-                    <label class="u-input__label">
-                      <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль"></label>
-                  </div>
-                  <div class="login-block__form-footer">
-                    <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
-                      <span class="btn__inner">
-                        <span class="btn__title">Отправить</span>
-                      </span>
-                    </button>
-                  </div>
-                </form>
-                <div class="login-block__privacy u-privacy">
-                  <p>
-                    Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими
-                    <a href="terms.html" target="_blank">Условиями использования</a>
-                    и&nbsp;
-                    <a href="privacy.html" target="_blank">Политикой конфиденциальности</a>
-                  </p>
-                </div>
-                <div class="login-block__sc-auth sc-auth">
-                  <p class="title fs-4 sc-auth__title">Регистрация через соц сети:</p>
-                  <ul class="sc-auth__list">
-                    <li class="sc-auth__list-item">
-                      <button type="button" class="sc-auth__list-btn">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#yandex-color"></use>
+              <div class="chat-main__footer">
+                <div class="chat-main__footer-action">
+                  <div class="chat-main__footer-action-version chat-version chat-version--size-md chat-version--theme-grey js-chat-version">
+                    <div class="chat-version__inner">
+                      <div class="chat-version__dropdown">
+                        <button type="button" data-version="3.5" class="chat-version__dropdown-btn js-chat-version-switch">GPT-3.5</button>
+                        <button type="button" data-version="4o" class="is-active chat-version__dropdown-btn js-chat-version-switch">GPT-4o</button>
+                      </div>
+                      <button type="button" class="chat-version__toggle js-chat-version-toggle">
+                        <svg class="u-icon chat-version__toggle-icon">
+                          <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
                         </svg>
+                        <span class="chat-version__toggle-title"></span>
                       </button>
-                    </li>
-                    <li class="sc-auth__list-item">
-                      <button type="button" class="sc-auth__list-btn">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#vk-color"></use>
-                        </svg>
-                      </button>
-                    </li>
-                    <li class="sc-auth__list-item">
-                      <button type="button" class="sc-auth__list-btn">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#google-color"></use>
-                        </svg>
-                      </button>
-                    </li>
-                  </ul>
-                </div>
-                <div class="login-block__router">
-                  <p class="login-block__router-title">Уже есть аккаунт?</p>
-                  <button type="button" data-modal="popup-login" class="router-btn router-btn--theme-accent login-block__router-btn">Войти ></button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-forgot" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner login-block">
-            <picture class="login-block__bg">
-              <source srcset="images/login-block-bg.webp" type="image/webp">
-              <img src="images/login-block-bg.jpg" alt="Восстановление пароля" width="1200" height="583"></picture>
-            <div class="login-block__row">
-              <div class="login-block__col login-block__col--content">
-                <div class="login-block__content">
-                  <div class="login-block__rating reviews-rating reviews-rating--theme-accent-blur">
-                    <div class="reviews-rating__inner">
-                      <picture class="reviews-rating__logo">
-                        <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI"></picture>
-                      <p class="fs-1 reviews-rating__estimation">4.9</p>
-                      <div class="reviews-rating__rating u-rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
-                      <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
-                    </div>
-                  </div>
-                  <div class="login-block__benefits">
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#picture"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
-                      </div>
-                    </div>
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#text"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
-                      </div>
-                    </div>
-                    <div class="info-header login-block__benefits-item">
-                      <div class="info-header__inner">
-                        <div class="info-header__media">
-                          <div class="info-header__icon">
-                            <svg class="u-icon">
-                              <use xlink:href="images/icons/icons.svg#question-mark"></use>
-                            </svg>
-                          </div>
-                        </div>
-                        <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
-                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="login-block__col login-block__col--form">
-                <p class="title fs-2 login-block__title">Восстановление пароля</p>
-                <p class="login-block__subtitle is-forgot">
-                  Введите адрес электронной почты, который вы использовали при регистрации, и&nbsp;мы вышлем вам ссылку для сброса пароля
-                </p>
-                <form action="#" class="login-block__form">
-                  <div class="u-input login-block__form-input">
-                    <label class="u-input__label">
-                      <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com"></label>
-                  </div>
-                  <div class="login-block__form-footer">
-                    <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
-                      <span class="btn__inner">
-                        <span class="btn__title">Отправить</span>
-                      </span>
-                    </button>
-                  </div>
-                </form>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-chat-download-ask" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__chat-form-wrapper">
-              <header class="popup__chat-form-header">
-                <p class="title fs-3 popup__chat-form-title">Загрузи и спроси</p>
-                <p class="popup__chat-form-subtitle">Задайте любой вопрос по&nbsp;документу</p>
-              </header>
-              <form action="#" class="popup__chat-form">
-                <div class="popup__chat-form-upload-file upload-file">
-                  <input type="file" name="attach-file-article" id="attach-file-article" class="upload-file__control" value="">
-                  <div class="upload-file__inner">
-                    <label for="attach-file-article" class="upload-file__label">
-                      <span class="upload-file__body">
-                        <span class="upload-file__picture">
+                <form action="#" class="chat-main__message">
+                  <textarea name="message" rows="" cols="" id="message-textarea" class="u-scrollbar chat-main__message-textarea js-chat-textarea u-textarea u-textarea--size-md u-textarea--theme-white" placeholder="Напишите ваше сообщение"></textarea>
+                  <div class="chat-main__message-aside">
+                    <p class="chat-main__message-max-symbol">0/10000</p>
+                    <button type="submit" id="send-button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__message-btn-send" title="Отправить">
+                      <span class="btn-send__inner">
+                        <span class="btn-send__title visually-hidden">Отправить сообщение</span>
+                        <span class="btn-send__icon">
                           <svg class="u-icon">
-                            <use xlink:href="images/icons/icons.svg#upload-file"></use>
+                            <use xlink:href="images/icons/icons.svg#paper-plane"></use>
                           </svg>
                         </span>
-                        <span class="d-lg-none upload-file__title">Перетащите файл сюда</span>
-                        <span class="upload-file__title color-accent">Выбрать файл</span>
                       </span>
-                    </label>
+                    </button>
                   </div>
-                  <div class="upload-file__limitation">
-                    <p class="upload-file__limitation-text">
-                      Поддерживаемые форматы:
-                      <strong>PDF, DOC, XLSX</strong>
-                    </p>
-                    <p class="upload-file__limitation-text">
-                      Макс. размер файла:
-                      <strong>20mb</strong>
-                    </p>
-                  </div>
-                </div>
-                <div class="u-input popup__chat-form-message">
-                  <label class="u-input__label">
-                    <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 124rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
-                  </label>
-                </div>
-                <footer class="popup__chat-form-footer">
-                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                    <span class="btn__inner">
-                      <span class="btn__title">Спросить</span>
-                    </span>
-                  </button>
-                </footer>
-              </form>
-            </div>
+                </form>
+              </div>
+            </main>
           </div>
         </div>
       </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-chat-link-ask" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__chat-form-wrapper">
-              <header class="popup__chat-form-header">
-                <svg class="u-icon popup__chat-form-header-icon">
-                  <use xlink:href="images/icons/icons.svg#attach"></use>
-                </svg>
-                <p class="title fs-3 popup__chat-form-title">Вставь ссылку и спроси</p>
-                <p class="popup__chat-form-subtitle">Спросите или найдите что&nbsp;угодно на&nbsp;сайте</p>
-              </header>
-              <form action="#" class="popup__chat-form">
-                <div class="u-input popup__chat-form-input">
-                  <label class="u-input__label">
-                    <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на сайт"></label>
+      <div class="u-scrollbar popup" data-popup="popup-login" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner login-block">
+        <picture class="login-block__bg">
+          <source srcset="images/login-block-bg.webp" type="image/webp">
+          <img src="images/login-block-bg.jpg" alt="Войдите в свой аккаунт" width="1200" height="583">
+        </picture>
+        <div class="login-block__row">
+          <div class="login-block__col login-block__col--content">
+            <div class="login-block__content">
+              <div class="login-block__rating reviews-rating reviews-rating--theme-accent-blur">
+                <div class="reviews-rating__inner">
+                  <picture class="reviews-rating__logo">
+                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                  </picture>
+                  <p class="fs-1 reviews-rating__estimation">4.9</p>
+                  <div class="reviews-rating__rating u-rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
+                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
                 </div>
-                <div class="u-input popup__chat-form-message">
-                  <label class="u-input__label">
-                    <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
-                  </label>
-                </div>
-                <footer class="popup__chat-form-footer">
-                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                    <span class="btn__inner">
-                      <span class="btn__title">Спросить</span>
-                    </span>
-                  </button>
-                </footer>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-chat-youtube-ask" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__chat-form-wrapper">
-              <header class="popup__chat-form-header">
-                <svg class="u-icon popup__chat-form-header-icon">
-                  <use xlink:href="images/icons/icons.svg#youtube-color"></use>
-                </svg>
-                <p class="title fs-3 popup__chat-form-title">YouTube и спроси</p>
-                <p class="popup__chat-form-subtitle">Спросите что угодно о&nbsp;видео с YouTube</p>
-              </header>
-              <form action="#" class="popup__chat-form">
-                <div class="u-input popup__chat-form-input">
-                  <label class="u-input__label">
-                    <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на видео с YouTube"></label>
-                </div>
-                <div class="u-input popup__chat-form-message">
-                  <label class="u-input__label">
-                    <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
-                  </label>
-                </div>
-                <footer class="popup__chat-form-footer">
-                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                    <span class="btn__inner">
-                      <span class="btn__title">Спросить</span>
-                    </span>
-                  </button>
-                </footer>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-chat-youtube" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__chat-form-wrapper">
-              <header class="popup__chat-form-header">
-                <svg class="u-icon popup__chat-form-header-icon">
-                  <use xlink:href="images/icons/icons.svg#youtube-color"></use>
-                </svg>
-                <p class="title fs-3 popup__chat-form-title">Краткое содержание YouTube-видео</p>
-                <p class="popup__chat-form-subtitle">Получите детальную выжимку из&nbsp;видео с&nbsp;YouTube</p>
-              </header>
-              <form action="#" class="popup__chat-form">
-                <div class="u-input popup__chat-form-input">
-                  <label class="u-input__label">
-                    <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на видео с YouTube"></label>
-                </div>
-                <footer class="popup__chat-form-footer">
-                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                    <span class="btn__inner">
-                      <span class="btn__title">Отправить</span>
-                    </span>
-                  </button>
-                </footer>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-chat-article" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__chat-form-wrapper">
-              <header class="popup__chat-form-header">
-                <p class="title fs-3 popup__chat-form-title">Краткое содержание статьи</p>
-                <p class="popup__chat-form-subtitle">Получите детальную выжимку из&nbsp;статьи</p>
-              </header>
-              <form action="#" class="popup__chat-form">
-                <div class="popup__chat-form-upload-file upload-file">
-                  <input type="file" name="attach-file" id="attach-file" class="upload-file__control" value="">
-                  <div class="upload-file__inner">
-                    <label for="attach-file" class="upload-file__label">
-                      <span class="upload-file__body">
-                        <span class="upload-file__picture">
-                          <svg class="u-icon">
-                            <use xlink:href="images/icons/icons.svg#upload-file"></use>
-                          </svg>
-                        </span>
-                        <span class="d-lg-none upload-file__title">Перетащите файл сюда</span>
-                        <span class="upload-file__title color-accent">Выбрать файл</span>
-                      </span>
-                    </label>
-                  </div>
-                  <div class="upload-file__limitation">
-                    <p class="upload-file__limitation-text">
-                      Поддерживаемые форматы:
-                      <strong>PDF, DOC, XLSX</strong>
-                    </p>
-                    <p class="upload-file__limitation-text">
-                      Макс. размер файла:
-                      <strong>20mb</strong>
-                    </p>
-                  </div>
-                </div>
-                <footer class="popup__chat-form-footer">
-                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                    <span class="btn__inner">
-                      <span class="btn__title">Отправить</span>
-                    </span>
-                  </button>
-                </footer>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-change-password" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__form-wrapper">
-              <p class="title fs-3 popup__form-title">Изменение пароля</p>
-              <form action="#" class="popup__form">
-                <div class="u-input popup__form-input">
-                  <label class="u-input__label">
-                    <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Введите старый пароль"></label>
-                </div>
-                <div class="u-input popup__form-input">
-                  <label class="u-input__label">
-                    <input type="password" name="password_new" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Введите новый пароль"></label>
-                </div>
-                <div class="u-input popup__form-input">
-                  <label class="u-input__label">
-                    <input type="password" name="password_new_repeat" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Повторно введите новый пароль"></label>
-                </div>
-                <footer class="btn-group popup__form-footer">
-                  <div class="btn-group__inner">
-                    <div class="btn-group__col">
-                      <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-btn" disabled="disabled">
-                        <span class="btn__inner">
-                          <span class="btn__title">Сменить пароль</span>
-                        </span>
-                      </button>
+              </div>
+              <div class="login-block__benefits">
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#picture"></use>
+                        </svg>
+                      </div>
                     </div>
-                  </div>
-                </footer>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="u-scrollbar popup" data-popup="popup-cancel-subscription" data-close-overlay>
-      <div class="popup__wrapper" data-close-overlay>
-        <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-          <button type="button" class="js-button-close popup__btn-close">
-            <svg class="u-icon btn-close__icon">
-              <use xlink:href="images/icons/icons.svg#close"></use>
-            </svg>
-          </button>
-          <div class="popup__inner">
-            <div class="popup__form-wrapper">
-              <p class="title fs-3 popup__form-title">Вы уверены, что хотите отменить&nbsp;подписку?</p>
-              <footer class="btn-group popup__form-footer">
-                <div class="btn-group__inner">
-                  <div class="btn-group__col">
-                    <button type="submit" class="btn btn--size-md btn--theme-accent-outline popup__form-btn-remove">
-                      <span class="btn__inner">
-                        <span class="btn__title">Да, отменить</span>
-                      </span>
-                    </button>
-                  </div>
-                  <div class="btn-group__col">
-                    <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-btn-cancel">
-                      <span class="btn__inner">
-                        <span class="btn__title">Нет, не отменять</span>
-                      </span>
-                    </button>
+                    <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
                   </div>
                 </div>
-              </footer>
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#text"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
+                  </div>
+                </div>
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#question-mark"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-block__col login-block__col--form">
+            <p class="title fs-2 login-block__title">Войдите в&nbsp;свой аккаунт</p>
+            <p class="login-block__subtitle">Пользуйтесь возможностями нашего ИИ</p>
+            <form action="#" class="login-block__form">
+              <div class="u-input login-block__form-input">
+                <label class="u-input__label">
+                  <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com">
+                </label>
+              </div>
+              <div class="u-input login-block__form-input">
+                <label class="u-input__label">
+                  <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль">
+                </label>
+              </div>
+              <div class="login-block__form-footer">
+                <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
+                  <span class="btn__inner">
+                    <span class="btn__title">Войти</span>
+                  </span>
+                </button>
+                <div class="login-block__form-footer-aside">
+                  <button type="button" data-modal="popup-forgot" class="router-btn router-btn--theme-accent login-block__form-footer-aside-forgot">Забыли пароль? ></button>
+                </div>
+              </div>
+            </form>
+            <div class="login-block__privacy u-privacy">
+              <p>Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+            </div>
+            <div class="login-block__sc-auth sc-auth">
+              <p class="title fs-4 sc-auth__title">Вход через соц сети:</p>
+              <ul class="sc-auth__list">
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#yandex-color"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#vk-color"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#google-color"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="login-block__router">
+              <p class="login-block__router-title">Нет аккаунта?</p>
+              <button type="button" data-modal="popup-registration" class="router-btn router-btn--theme-accent login-block__router-btn">Зарегистрироваться ></button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
+</div>
 
-  <script src="js/app.min.js??=v=20240906124229"></script>
-</body>
+<div class="u-scrollbar popup" data-popup="popup-registration" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner login-block">
+        <picture class="login-block__bg">
+          <source srcset="images/login-block-bg.webp" type="image/webp">
+          <img src="images/login-block-bg.jpg" alt="Попробуйте чат" width="1200" height="583">
+        </picture>
+        <div class="login-block__row">
+          <div class="login-block__col login-block__col--content">
+            <div class="login-block__content">
+              <div class="login-block__rating reviews-rating reviews-rating--theme-accent-blur">
+                <div class="reviews-rating__inner">
+                  <picture class="reviews-rating__logo">
+                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                  </picture>
+                  <p class="fs-1 reviews-rating__estimation">4.9</p>
+                  <div class="reviews-rating__rating u-rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
+                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                </div>
+              </div>
+              <div class="login-block__benefits">
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#picture"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
+                  </div>
+                </div>
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#text"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
+                  </div>
+                </div>
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#question-mark"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-block__col login-block__col--form">
+            <p class="title fs-2 login-block__title">Попробуйте чат</p>
+            <p class="login-block__subtitle">Просто пройдите короткую регистрацию</p>
+            <form action="#" class="login-block__form">
+              <div class="u-input login-block__form-input">
+                <label class="u-input__label">
+                  <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com">
+                </label>
+              </div>
+              <div class="u-input login-block__form-input">
+                <label class="u-input__label">
+                  <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль">
+                </label>
+              </div>
+              <div class="login-block__form-footer">
+                <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
+                  <span class="btn__inner">
+                    <span class="btn__title">Отправить</span>
+                  </span>
+                </button>
+              </div>
+            </form>
+            <div class="login-block__privacy u-privacy">
+              <p>Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
+            </div>
+            <div class="login-block__sc-auth sc-auth">
+              <p class="title fs-4 sc-auth__title">Регистрация через соц сети:</p>
+              <ul class="sc-auth__list">
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#yandex-color"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#vk-color"></use>
+                    </svg>
+                  </button>
+                </li>
+                <li class="sc-auth__list-item">
+                  <button type="button" class="sc-auth__list-btn">
+                    <svg class="u-icon">
+                      <use xlink:href="images/icons/icons.svg#google-color"></use>
+                    </svg>
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="login-block__router">
+              <p class="login-block__router-title">Уже есть аккаунт?</p>
+              <button type="button" data-modal="popup-login" class="router-btn router-btn--theme-accent login-block__router-btn">Войти ></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-forgot" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner login-block">
+        <picture class="login-block__bg">
+          <source srcset="images/login-block-bg.webp" type="image/webp">
+          <img src="images/login-block-bg.jpg" alt="Восстановление пароля" width="1200" height="583">
+        </picture>
+        <div class="login-block__row">
+          <div class="login-block__col login-block__col--content">
+            <div class="login-block__content">
+              <div class="login-block__rating reviews-rating reviews-rating--theme-accent-blur">
+                <div class="reviews-rating__inner">
+                  <picture class="reviews-rating__logo">
+                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
+                  </picture>
+                  <p class="fs-1 reviews-rating__estimation">4.9</p>
+                  <div class="reviews-rating__rating u-rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
+                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
+                </div>
+              </div>
+              <div class="login-block__benefits">
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#picture"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Генерируйте изображения</h3>
+                  </div>
+                </div>
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#text"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Создавайте уникальный контент</h3>
+                  </div>
+                </div>
+                <div class="info-header login-block__benefits-item">
+                  <div class="info-header__inner">
+                    <div class="info-header__media">
+                      <div class="info-header__icon">
+                        <svg class="u-icon">
+                          <use xlink:href="images/icons/icons.svg#question-mark"></use>
+                        </svg>
+                      </div>
+                    </div>
+                    <h3 class="fs-5 info-header__title">Задавайте вопросы</h3>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="login-block__col login-block__col--form">
+            <p class="title fs-2 login-block__title">Восстановление пароля</p>
+            <p class="login-block__subtitle is-forgot">Введите адрес электронной почты, который вы использовали при регистрации, и&nbsp;мы вышлем вам ссылку для сброса пароля</p>
+            <form action="#" class="login-block__form">
+              <div class="u-input login-block__form-input">
+                <label class="u-input__label">
+                  <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com">
+                </label>
+              </div>
+              <div class="login-block__form-footer">
+                <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
+                  <span class="btn__inner">
+                    <span class="btn__title">Отправить</span>
+                  </span>
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-download-ask" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__chat-form-wrapper">
+          <header class="popup__chat-form-header">
+            <p class="title fs-3 popup__chat-form-title">Загрузи и спроси</p>
+            <p class="popup__chat-form-subtitle">Задайте любой вопрос по&nbsp;документу</p>
+          </header>
+          <form action="#" class="popup__chat-form">
+            <div class="popup__chat-form-upload-file upload-file">
+              <input type="file" name="attach-file-article" id="attach-file-article" class="upload-file__control" value="">
+              <div class="upload-file__inner">
+                <label for="attach-file-article" class="upload-file__label">
+                  <span class="upload-file__body">
+                    <span class="upload-file__picture">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#upload-file"></use>
+                      </svg>
+                    </span>
+                    <span class="d-lg-none upload-file__title">Перетащите файл сюда</span>
+                    <span class="upload-file__title color-accent">Выбрать файл</span>
+                  </span>
+                </label>
+              </div>
+              <div class="upload-file__limitation">
+                <p class="upload-file__limitation-text">Поддерживаемые форматы: <strong>PDF, DOC, XLSX</strong></p>
+                <p class="upload-file__limitation-text">Макс. размер файла: <strong>20mb</strong></p>
+              </div>
+            </div>
+            <div class="u-input popup__chat-form-message">
+              <label class="u-input__label">
+                <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 124rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
+              </label>
+            </div>
+            <footer class="popup__chat-form-footer">
+              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
+                <span class="btn__inner">
+                  <span class="btn__title">Спросить</span>
+                </span>
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-link-ask" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__chat-form-wrapper">
+          <header class="popup__chat-form-header">
+            <svg class="u-icon popup__chat-form-header-icon">
+              <use xlink:href="images/icons/icons.svg#attach"></use>
+            </svg>
+            <p class="title fs-3 popup__chat-form-title">Вставь ссылку и спроси</p>
+            <p class="popup__chat-form-subtitle">Спросите или найдите что&nbsp;угодно на&nbsp;сайте</p>
+          </header>
+          <form action="#" class="popup__chat-form">
+            <div class="u-input popup__chat-form-input">
+              <label class="u-input__label">
+                <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на сайт">
+              </label>
+            </div>
+            <div class="u-input popup__chat-form-message">
+              <label class="u-input__label">
+                <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
+              </label>
+            </div>
+            <footer class="popup__chat-form-footer">
+              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
+                <span class="btn__inner">
+                  <span class="btn__title">Спросить</span>
+                </span>
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-youtube-ask" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__chat-form-wrapper">
+          <header class="popup__chat-form-header">
+            <svg class="u-icon popup__chat-form-header-icon">
+              <use xlink:href="images/icons/icons.svg#youtube-color"></use>
+            </svg>
+            <p class="title fs-3 popup__chat-form-title">YouTube и спроси</p>
+            <p class="popup__chat-form-subtitle">Спросите что угодно о&nbsp;видео с YouTube</p>
+          </header>
+          <form action="#" class="popup__chat-form">
+            <div class="u-input popup__chat-form-input">
+              <label class="u-input__label">
+                <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на видео с YouTube">
+              </label>
+            </div>
+            <div class="u-input popup__chat-form-message">
+              <label class="u-input__label">
+                <textarea name="message" class="u-scrollbar u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
+              </label>
+            </div>
+            <footer class="popup__chat-form-footer">
+              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
+                <span class="btn__inner">
+                  <span class="btn__title">Спросить</span>
+                </span>
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-youtube" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__chat-form-wrapper">
+          <header class="popup__chat-form-header">
+            <svg class="u-icon popup__chat-form-header-icon">
+              <use xlink:href="images/icons/icons.svg#youtube-color"></use>
+            </svg>
+            <p class="title fs-3 popup__chat-form-title">Краткое содержание YouTube-видео</p>
+            <p class="popup__chat-form-subtitle">Получите детальную выжимку из&nbsp;видео с&nbsp;YouTube</p>
+          </header>
+          <form action="#" class="popup__chat-form">
+            <div class="u-input popup__chat-form-input">
+              <label class="u-input__label">
+                <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на видео с YouTube">
+              </label>
+            </div>
+            <footer class="popup__chat-form-footer">
+              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
+                <span class="btn__inner">
+                  <span class="btn__title">Отправить</span>
+                </span>
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-chat-article" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__chat-form-wrapper">
+          <header class="popup__chat-form-header">
+            <p class="title fs-3 popup__chat-form-title">Краткое содержание статьи</p>
+            <p class="popup__chat-form-subtitle">Получите детальную выжимку из&nbsp;статьи</p>
+          </header>
+          <form action="#" class="popup__chat-form">
+            <div class="popup__chat-form-upload-file upload-file">
+              <input type="file" name="attach-file" id="attach-file" class="upload-file__control" value="">
+              <div class="upload-file__inner">
+                <label for="attach-file" class="upload-file__label">
+                  <span class="upload-file__body">
+                    <span class="upload-file__picture">
+                      <svg class="u-icon">
+                        <use xlink:href="images/icons/icons.svg#upload-file"></use>
+                      </svg>
+                    </span>
+                    <span class="d-lg-none upload-file__title">Перетащите файл сюда</span>
+                    <span class="upload-file__title color-accent">Выбрать файл</span>
+                  </span>
+                </label>
+              </div>
+              <div class="upload-file__limitation">
+                <p class="upload-file__limitation-text">Поддерживаемые форматы: <strong>PDF, DOC, XLSX</strong></p>
+                <p class="upload-file__limitation-text">Макс. размер файла: <strong>20mb</strong></p>
+              </div>
+            </div>
+            <footer class="popup__chat-form-footer">
+              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
+                <span class="btn__inner">
+                  <span class="btn__title">Отправить</span>
+                </span>
+              </button>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-change-password" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__form-wrapper">
+          <p class="title fs-3 popup__form-title">Изменение пароля</p>
+          <form action="#" class="popup__form">
+            <div class="u-input popup__form-input">
+              <label class="u-input__label">
+                <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Введите старый пароль">
+              </label>
+            </div>
+            <div class="u-input popup__form-input">
+              <label class="u-input__label">
+                <input type="password" name="password_new" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Введите новый пароль">
+              </label>
+            </div>
+            <div class="u-input popup__form-input">
+              <label class="u-input__label">
+                <input type="password" name="password_new_repeat" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Повторно введите новый пароль">
+              </label>
+            </div>
+            <footer class="btn-group popup__form-footer">
+              <div class="btn-group__inner">
+                <div class="btn-group__col">
+                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-btn" disabled="disabled">
+                    <span class="btn__inner">
+                      <span class="btn__title">Сменить пароль</span>
+                    </span>
+                  </button>
+                </div>
+              </div>
+            </footer>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="u-scrollbar popup" data-popup="popup-cancel-subscription" data-close-overlay>
+  <div class="popup__wrapper" data-close-overlay>
+    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
+      <button type="button" class="js-button-close popup__btn-close">
+        <svg class="u-icon btn-close__icon">
+          <use xlink:href="images/icons/icons.svg#close"></use>
+        </svg>
+      </button>
+      <div class="popup__inner">
+        <div class="popup__form-wrapper">
+          <p class="title fs-3 popup__form-title">Вы уверены, что хотите отменить&nbsp;подписку?</p>
+          <footer class="btn-group popup__form-footer">
+            <div class="btn-group__inner">
+              <div class="btn-group__col">
+                <button type="submit" class="btn btn--size-md btn--theme-accent-outline popup__form-btn-remove">
+                  <span class="btn__inner">
+                    <span class="btn__title">Да, отменить</span>
+                  </span>
+                </button>
+              </div>
+              <div class="btn-group__col">
+                <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-btn-cancel">
+                  <span class="btn__inner">
+                    <span class="btn__title">Нет, не отменять</span>
+                  </span>
+                </button>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    </div>
+
+    <script src="js/app.min.js??=v=20240913183654"></script>
+  </body>
 </html>

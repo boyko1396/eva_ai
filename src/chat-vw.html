@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+  @@include('html/head.html', {
+    'title': 'Eva AI - Chat'
+  })
+  <body class="u-scrollbar">
+    <style>
+      html {
+        @media (max-width: 767px) {
+          font-size: .27777777777vw;
+        }
+      }
+    </style>
+
+    <div id="root" class="eva-chat">
+      <div class="chat eva-chat__inner">
+        <div class="chat__inner">
+          <div class="chat__body">
+            @@include('html/components/header-chat.html')
+            @@include('html/components/chat-aside-left.html', {
+              'class_chat': ' ',
+              'class_images': ' ',
+              'class_settings': ' '
+            })
+            <main class="u-box u-box--theme-grey chat-main chat__main" role="main">
+              <div class="js-chat-body u-scrollbar u-scrollbar--offset-right chat-main__body">
+                <p class="chat-main__body-appeal">Привет, жаждущий исследователь! Приготовьтесь открыть для себя увлекательные открытия и расширить горизонты своего понимания.</p>
+                <div class="chat-main__body-hint">
+                  <div class="chat-main__body-hint-list">
+                    <button type="button" class="hint-btn chat-main__body-hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Контент-план для блогера из&nbsp;сферы...</span>
+                      </span>
+                    </button>
+                    <button type="button" class="hint-btn chat-main__body-hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Скрипт на Python&nbsp;<br class="d-xs-none">для парсинга</span>
+                      </span>
+                    </button>
+                    <button type="button" class="hint-btn chat-main__body-hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Расскажи&nbsp;<br class="d-xs-none">про&nbsp;черные дыры</span>
+                      </span>
+                    </button>
+                    <button type="button" class="hint-btn chat-main__body-hint-btn">
+                      <span class="hint-btn__inner">
+                        <span class="hint-btn__title">Напиши меню&nbsp;<br class="d-xs-none">на&nbsp;неделю</span>
+                      </span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <div class="chat-main__footer">
+                <div class="chat-main__footer-action">
+                  <div class="js-chat-version chat-version chat-version--size-md chat-version--theme-grey chat-main__footer-action-version">
+                    <div class="chat-version__inner">
+                      <div class="chat-version__dropdown">
+                        <button type="button" data-version="3.5" class="js-chat-version-switch chat-version__dropdown-btn">GPT-3.5</button>
+                        <button type="button" data-version="4o" class="js-chat-version-switch chat-version__dropdown-btn is-active">GPT-4o</button>
+                      </div>
+                      <button type="button" class="js-chat-version-toggle chat-version__toggle">
+                        <svg class="u-icon chat-version__toggle-icon">
+                          <use xlink:href="images/icons/icons.svg#arrow-type-1"></use>
+                        </svg>
+                        <span class="chat-version__toggle-title"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <form action="#" class="chat-main__message">
+                  <textarea name="message" rows="" cols="" id="message-textarea" class="js-chat-textarea u-scrollbar u-textarea u-textarea--theme-white u-textarea--size-md chat-main__message-textarea" placeholder="Напишите ваше сообщение"></textarea>
+                  <div class="chat-main__message-aside">
+                    <p class="chat-main__message-max-symbol">0/10000</p>
+                    <button type="submit" id="send-button" class="btn-send btn-send--size-md btn-send--theme-accent chat-main__message-btn-send" title="Отправить">
+                      <span class="btn-send__inner">
+                        <span class="visually-hidden btn-send__title">Отправить сообщение</span>
+                        <span class="btn-send__icon">
+                          <svg class="u-icon">
+                            <use xlink:href="images/icons/icons.svg#paper-plane"></use>
+                          </svg>
+                        </span>
+                      </span>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </main>
+          </div>
+        </div>
+      </div>
+      @@include('html/modal.html')
+    </div>
+
+    @@include('html/script.html')
+  </body>
+</html>

@@ -1,94 +1,26 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ru">
-  <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
-  <link rel="stylesheet" href="css/style.min.css??=v=20240913183654">
-  <link rel="apple-touch-icon" sizes="180x180" href="static/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="static/favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="static/favicon/favicon-16x16.png">
-  <link rel="manifest" href="static/favicon/site.webmanifest">
-  <link rel="mask-icon" href="static/favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <link rel="shortcut icon" href="static/favicon/favicon.ico">
-  <meta name="msapplication-TileColor" content="#a129ff">
-  <meta name="msapplication-config" content="static/favicon/browserconfig.xml">
-  <meta name="theme-color" content="#a129ff">
-  <title>Eva AI</title>
-</head>
+  @@include('html/head.html', {
+    'title': 'Eva AI'
+  })
   <body class="u-scrollbar">
+    <style>
+      html {
+        @media (max-width: 767px) {
+          font-size: .27777777777vw;
+        }
+      }
+    </style>
 
     <div id="root" class="site">
       <div class="site__inner">
-        
-        <header class="header site__header">
-  <div class="container container--size-md header__container">
-    <a href="/" class="logo logo--size-sm header__logo">
-      <picture class="logo__img">
-        <img src="images/logo-type-1.svg" width="144" height="38" alt="Eva AI">
-      </picture>
-    </a>
-    <div class="header__dropdown">
-      <div class="d-lg-block header__dropdown-top">
-        <button type="button" class="header__dropdown-toggle js-header-toggle header__dropdown-toggle--close">
-          <svg class="u-icon">
-            <use xlink:href="images/icons/icons.svg#menu-close"></use>
-          </svg>
-        </button>
-        <a href="/" class="logo logo--size-sm header__dropdown-logo">
-          <picture class="logo__img">
-            <img src="images/logo-type-2.svg" alt="Eva AI">
-          </picture>
-        </a>
-      </div>
-      <nav class="header__nav" role="navigation">
-        <ul class="header__nav-list">
-          <li class="header__nav-item">
-            <a href="#about" class="js-anchor header__nav-link">Возможности</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="#target-audience" class="js-anchor header__nav-link">Для кого</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="#reviews" class="js-anchor header__nav-link">Отзывы</a>
-          </li>
-          <li class="header__nav-item">
-            <a href="#faq" class="js-anchor header__nav-link">FAQ</a>
-          </li>
-        </ul>
-      </nav>
-      <div class="btn-group header__btn-group">
-        <div class="btn-group__inner">
-          <div class="btn-group__col">
-            <button type="button" data-modal="popup-login" class="btn btn--size-md btn--theme-accent-outline btn-group__item">
-              <span class="btn__inner">
-                <span class="btn__title d-lg-none">Вход</span>
-                <span class="btn__title d-lg-block">Войти</span>
-              </span>
-            </button>
-          </div>
-          <div class="btn-group__col">
-            <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill btn-group__item">
-              <span class="btn__inner">
-                <span class="btn__title d-lg-none">Регистрация</span>
-                <span class="btn__title d-lg-block">Зарегистрироваться</span>
-              </span>
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    <button type="button" class="d-lg-block header__dropdown-toggle header__dropdown-toggle--open js-header-toggle">
-      <svg class="u-icon">
-        <use xlink:href="images/icons/icons.svg#menu-open"></use>
-      </svg>
-    </button>
-  </div>
-  <div class="d-lg-block header__overlay js-header-toggle-close"></div>
-</header>
-        
+        <!-- header BEGIN -->
+        @@include('html/components/header.html', {
+          'el': 'site__header'
+        })
+        <!-- header END -->
         <main role="main" class="site__main">
-          
+          <!-- intro BEGIN -->
           <section class="intro">
             <picture class="glare glare--1 intro__glare">
               <img src="images/bg-glare-1.svg" width="1292" height="1725">
@@ -96,10 +28,21 @@
             <div class="container container--size-md intro__container">
               <div class="intro__main">
                 <picture class="intro__bg">
-                  <source srcset="images/intro-hero-767.webp" type="image/webp" media="(max-width: 767px)">
-                  <source srcset="images/intro-hero-767.jpg" media="(max-width: 767px)">
-                  <source srcset="images/intro-hero.webp" type="image/webp">
-                  <img src="images/intro-hero.jpg" alt="Eva AI умный помощник" width="1200" height="513">
+                  <source
+                    srcset="images/intro-hero-767.webp"
+                    type="image/webp"
+                    media="(max-width: 767px)">
+                  <source 
+                    srcset="images/intro-hero-767.jpg"
+                    media="(max-width: 767px)">
+                  <source
+                    srcset="images/intro-hero.webp"
+                    type="image/webp">
+                  <img
+                    src="images/intro-hero.jpg"
+                    alt="Eva AI умный помощник"
+                    width="1200"
+                    height="513">
                 </picture>
                 <div class="intro__content">
                   <h1 class="intro__title"><span class="visually-hidden">Eva AI</span> умный помощник</h1>
@@ -176,8 +119,8 @@
               </div>
             </div>
           </section>
-          
-          
+          <!-- intro END -->
+          <!-- about BEGIN -->
           <section id="about" class="about">
             <div class="container container--size-md about__container">
               <h2 class="fs-1 about__title">Что умеет EVA&nbsp;AI</h2>
@@ -186,8 +129,14 @@
                   <div class="row about-card__row">
                     <div class="row__col--6 about-card__col about-card__col--media">
                       <picture class="about-card__media">
-                        <source srcset="images/about-card-1.webp" type="image/webp">
-                        <img src="images/about-card-1.jpg" alt="Тексты" width="588" height="329">
+                        <source
+                          srcset="images/about-card-1.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-1.jpg"
+                          alt="Тексты"
+                          width="588"
+                          height="329">
                       </picture>
                     </div>
                     <div class="row__col--6 about-card__col about-card__col--content">
@@ -280,8 +229,14 @@
                   <div class="row about-card__row">
                     <div class="row__col--6 about-card__col about-card__col--media">
                       <picture class="about-card__media">
-                        <source srcset="images/about-card-2.webp" type="image/webp">
-                        <img src="images/about-card-2.jpg" alt="Изображения" width="588" height="329">
+                        <source
+                          srcset="images/about-card-2.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-2.jpg"
+                          alt="Изображения"
+                          width="588"
+                          height="329">
                       </picture>
                     </div>
                     <div class="row__col--6 about-card__col about-card__col--content">
@@ -374,8 +329,14 @@
                   <div class="row about-card__row">
                     <div class="row__col--6 about-card__col about-card__col--media">
                       <picture class="about-card__media">
-                        <source srcset="images/about-card-3.webp" type="image/webp">
-                        <img src="images/about-card-3.jpg" alt="Видео" width="588" height="329">
+                        <source
+                          srcset="images/about-card-3.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-3.jpg"
+                          alt="Видео"
+                          width="588"
+                          height="329">
                       </picture>
                     </div>
                     <div class="row__col--6 about-card__col about-card__col--content">
@@ -468,8 +429,14 @@
                   <div class="row about-card__row">
                     <div class="row__col--6 about-card__col about-card__col--media">
                       <picture class="about-card__media">
-                        <source srcset="images/about-card-4.webp" type="image/webp">
-                        <img src="images/about-card-4.jpg" alt="Документы и ссылки" width="588" height="329">
+                        <source
+                          srcset="images/about-card-4.webp"
+                          type="image/webp">
+                        <img
+                          src="images/about-card-4.jpg"
+                          alt="Документы и ссылки"
+                          width="588"
+                          height="329">
                       </picture>
                     </div>
                     <div class="row__col--6 about-card__col about-card__col--content">
@@ -561,8 +528,8 @@
               </div>
             </div>
           </section>
-          
-          
+          <!-- about END -->
+          <!-- target-audience BEGIN -->
           <section id="target-audience" class="target-audience">
             <picture class="glare glare--1 target-audience__glare">
               <img src="images/bg-glare-1.svg" width="1292" height="1725">
@@ -576,8 +543,14 @@
                       <div class="target-audience-card__inner">
                         <div class="target-audience-card__media">
                           <picture class="target-audience-card__picture">
-                            <source srcset="images/target-audience-card-1.webp" type="image/webp">
-                            <img src="images/target-audience-card-1.jpg" alt="Студентам" width="186" height="120">
+                            <source
+                              srcset="images/target-audience-card-1.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-1.jpg"
+                              alt="Студентам"
+                              width="186"
+                              height="120">
                           </picture>
                         </div>
                         <div class="target-audience-card__content">
@@ -591,8 +564,14 @@
                       <div class="target-audience-card__inner">
                         <div class="target-audience-card__media">
                           <picture class="target-audience-card__picture">
-                            <source srcset="images/target-audience-card-2.webp" type="image/webp">
-                            <img src="images/target-audience-card-2.jpg" alt="Копирайтерам" width="186" height="120">
+                            <source
+                              srcset="images/target-audience-card-2.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-2.jpg"
+                              alt="Копирайтерам"
+                              width="186"
+                              height="120">
                           </picture>
                         </div>
                         <div class="target-audience-card__content">
@@ -606,8 +585,14 @@
                       <div class="target-audience-card__inner">
                         <div class="target-audience-card__media">
                           <picture class="target-audience-card__picture">
-                            <source srcset="images/target-audience-card-3.webp" type="image/webp">
-                            <img src="images/target-audience-card-3.jpg" alt="Фрилансерам" width="186" height="120">
+                            <source
+                              srcset="images/target-audience-card-3.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-3.jpg"
+                              alt="Фрилансерам"
+                              width="186"
+                              height="120">
                           </picture>
                         </div>
                         <div class="target-audience-card__content">
@@ -621,8 +606,14 @@
                       <div class="target-audience-card__inner">
                         <div class="target-audience-card__media">
                           <picture class="target-audience-card__picture">
-                            <source srcset="images/target-audience-card-4.webp" type="image/webp">
-                            <img src="images/target-audience-card-4.jpg" alt="Программистам" width="186" height="120">
+                            <source
+                              srcset="images/target-audience-card-4.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-4.jpg"
+                              alt="Программистам"
+                              width="186"
+                              height="120">
                           </picture>
                         </div>
                         <div class="target-audience-card__content">
@@ -636,8 +627,14 @@
                       <div class="target-audience-card__inner">
                         <div class="target-audience-card__media">
                           <picture class="target-audience-card__picture">
-                            <source srcset="images/target-audience-card-5.webp" type="image/webp">
-                            <img src="images/target-audience-card-5.jpg" alt="Юристам" width="186" height="120">
+                            <source
+                              srcset="images/target-audience-card-5.webp"
+                              type="image/webp">
+                            <img
+                              src="images/target-audience-card-5.jpg"
+                              alt="Юристам"
+                              width="186"
+                              height="120">
                           </picture>
                         </div>
                         <div class="target-audience-card__content">
@@ -657,8 +654,8 @@
               </div>
             </div>
           </section>
-          
-          
+          <!-- target-audience END -->
+          <!-- features BEGIN -->
           <section class="features">
             <picture class="glare glare--1 features__glare">
               <img src="images/bg-glare-1.svg" width="1292" height="1725">
@@ -763,8 +760,8 @@
               </div>
             </div>
           </section>
-          
-          
+          <!-- features END -->
+          <!-- how-works BEGIN -->
           <section class="how-works">
             <picture class="glare glare--1 how-works__glare">
               <img src="images/bg-glare-1.svg" width="1292" height="1725">
@@ -773,13 +770,19 @@
               <h2 class="fs-1 how-works__title">Как это работает</h2>
               <div class="how-works__list">
                 <div class="row how-works__list-row">
-                  <div class="how-works__list-col row__col--3">
+                  <div class="row__col--3 how-works__list-col">
                     <article class="how-works-card how-works__list-card">
                       <div class="how-works-card__inner">
                         <div class="how-works-card__media">
                           <picture class="how-works-card__picture">
-                            <source srcset="images/how-works-card-1.webp" type="image/webp">
-                            <img src="images/how-works-card-1.jpg" alt="Зарегистрируйтесь и настройте профиль" width="282" height="240">
+                            <source
+                              srcset="images/how-works-card-1.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-1.jpg"
+                              alt="Зарегистрируйтесь и настройте профиль"
+                              width="282"
+                              height="240">
                           </picture>
                         </div>
                         <div class="u-box u-box--theme-grey how-works-card__content">
@@ -788,13 +791,19 @@
                       </div>
                     </article>
                   </div>
-                  <div class="how-works__list-col row__col--3">
+                  <div class="row__col--3 how-works__list-col">
                     <article class="how-works-card how-works__list-card">
                       <div class="how-works-card__inner">
                         <div class="how-works-card__media">
                           <picture class="how-works-card__picture">
-                            <source srcset="images/how-works-card-2.webp" type="image/webp">
-                            <img src="images/how-works-card-2.jpg" alt="Загрузите ваши данные или вставьте ссылки" width="282" height="240">
+                            <source
+                              srcset="images/how-works-card-2.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-2.jpg"
+                              alt="Загрузите ваши данные или вставьте ссылки"
+                              width="282"
+                              height="240">
                           </picture>
                         </div>
                         <div class="u-box u-box--theme-grey how-works-card__content">
@@ -803,13 +812,19 @@
                       </div>
                     </article>
                   </div>
-                  <div class="how-works__list-col row__col--3">
+                  <div class="row__col--3 how-works__list-col">
                     <article class="how-works-card how-works__list-card">
                       <div class="how-works-card__inner">
                         <div class="how-works-card__media">
                           <picture class="how-works-card__picture">
-                            <source srcset="images/how-works-card-3.webp" type="image/webp">
-                            <img src="images/how-works-card-3.jpg" alt="Получите результаты и рекомендации" width="282" height="240">
+                            <source
+                              srcset="images/how-works-card-3.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-3.jpg"
+                              alt="Получите результаты и рекомендации"
+                              width="282"
+                              height="240">
                           </picture>
                         </div>
                         <div class="u-box u-box--theme-grey how-works-card__content">
@@ -818,13 +833,19 @@
                       </div>
                     </article>
                   </div>
-                  <div class="how-works__list-col row__col--3">
+                  <div class="row__col--3 how-works__list-col">
                     <article class="how-works-card how-works__list-card">
                       <div class="how-works-card__inner">
                         <div class="how-works-card__media">
                           <picture class="how-works-card__picture">
-                            <source srcset="images/how-works-card-4.webp" type="image/webp">
-                            <img src="images/how-works-card-4.jpg" alt="Зарегистрироваться" width="282" height="240">
+                            <source
+                              srcset="images/how-works-card-4.webp"
+                              type="image/webp">
+                            <img
+                              src="images/how-works-card-4.jpg"
+                              alt="Зарегистрироваться"
+                              width="282"
+                              height="240">
                           </picture>
                         </div>
                         <button type="button" data-modal="popup-registration" class="btn btn--size-md btn--theme-accent-fill how-works-card__btn">
@@ -839,10 +860,10 @@
               </div>
             </div>
           </section>
-          
-          
+          <!-- how-works END -->
+          <!-- examples BEGIN -->
           <section class="examples">
-            <picture class="d-lg-none examples__glare glare glare--1">
+            <picture class="d-lg-none glare glare--1 examples__glare">
               <img src="images/bg-glare-1.svg" width="1292" height="1725">
             </picture>
             <div class="container container--size-md examples__container">
@@ -853,10 +874,21 @@
                     <div class="row examples-card__row">
                       <div class="row__col examples-card__col examples-card__col--media">
                         <picture class="examples-card__picture">
-                          <source srcset="images/examples-card-1-767.webp" type="image/webp" media="(max-width: 767px)">
-                          <source srcset="images/examples-card-1-767.jpg" media="(max-width: 767px)">
-                          <source srcset="images/examples-card-1.webp" type="image/webp">
-                          <img src="images/examples-card-1.jpg" alt="Вы можете загрузить любой файл и задать чату вопрос, связанный с ним" width="340" height="180">
+                          <source
+                            srcset="images/examples-card-1-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">
+                          <source 
+                            srcset="images/examples-card-1-767.jpg"
+                            media="(max-width: 767px)">
+                          <source
+                            srcset="images/examples-card-1.webp"
+                            type="image/webp">
+                          <img
+                            src="images/examples-card-1.jpg"
+                            alt="Вы можете загрузить любой файл и задать чату вопрос, связанный с ним"
+                            width="340"
+                            height="180">
                         </picture>
                       </div>
                       <div class="row__col examples-card__col examples-card__col--content">
@@ -890,10 +922,21 @@
                     <div class="row examples-card__row">
                       <div class="row__col examples-card__col examples-card__col--media">
                         <picture class="examples-card__picture">
-                          <source srcset="images/examples-card-2-767.webp" type="image/webp" media="(max-width: 767px)">
-                          <source srcset="images/examples-card-2-767.jpg" media="(max-width: 767px)">
-                          <source srcset="images/examples-card-2.webp" type="image/webp">
-                          <img src="images/examples-card-2.jpg" alt="Дайте ссылку на видео и задайте ваш вопрос" width="588" height="180">
+                          <source
+                            srcset="images/examples-card-2-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">
+                          <source 
+                            srcset="images/examples-card-2-767.jpg"
+                            media="(max-width: 767px)">
+                          <source
+                            srcset="images/examples-card-2.webp"
+                            type="image/webp">
+                          <img
+                            src="images/examples-card-2.jpg"
+                            alt="Дайте ссылку на видео и задайте ваш вопрос"
+                            width="588"
+                            height="180">
                         </picture>
                       </div>
                       <div class="row__col examples-card__col examples-card__col--content">
@@ -927,10 +970,21 @@
                     <div class="row examples-card__row">
                       <div class="row__col examples-card__col examples-card__col--media">
                         <picture class="examples-card__picture">
-                          <source srcset="images/examples-card-3-767.webp" type="image/webp" media="(max-width: 767px)">
-                          <source srcset="images/examples-card-3-767.jpg" media="(max-width: 767px)">
-                          <source srcset="images/examples-card-3.webp" type="image/webp">
-                          <img src="images/examples-card-3.jpg" alt="Вы можете дать ИИ ссылку и задать любой вопрос по содержанию страницы" width="340" height="180">
+                          <source
+                            srcset="images/examples-card-3-767.webp"
+                            type="image/webp"
+                            media="(max-width: 767px)">
+                          <source 
+                            srcset="images/examples-card-3-767.jpg"
+                            media="(max-width: 767px)">
+                          <source
+                            srcset="images/examples-card-3.webp"
+                            type="image/webp">
+                          <img
+                            src="images/examples-card-3.jpg"
+                            alt="Вы можете дать ИИ ссылку и задать любой вопрос по содержанию страницы"
+                            width="340"
+                            height="180">
                         </picture>
                       </div>
                       <div class="row__col examples-card__col examples-card__col--content">
@@ -961,8 +1015,8 @@
                 </article>
               </div>
               <footer class="examples__appeal">
-                <p class="fs-4 title examples__appeal-title">Или попробуйте отправить свой&nbsp;запрос</p>
-                <button type="button" data-modal="popup-registration" class="btn btn--theme-accent-fill btn--size-lg examples__appeal-btn">
+                <p class="title fs-4 examples__appeal-title">Или попробуйте отправить свой&nbsp;запрос</p>
+                <button type="button" data-modal="popup-registration" class="btn btn--size-lg btn--theme-accent-fill examples__appeal-btn">
                   <span class="btn__inner">
                     <span class="btn__title">Начать чат</span>
                   </span>
@@ -970,41 +1024,41 @@
               </footer>
             </div>
           </section>
-          
-          
+          <!-- examples END -->
+          <!-- reviews BEGIN -->
           <section id="reviews" class="reviews">
             <div class="container container--size-md reviews__container">
               <h2 class="fs-1 reviews__title">Отзывы</h2>
-              <div class="reviews-rating reviews-rating--theme-accent d-sm-block reviews__reviews-rating">
+              <div class="d-sm-block reviews-rating reviews-rating--theme-accent reviews__reviews-rating">
                 <div class="reviews-rating__inner">
                   <picture class="reviews-rating__logo">
                     <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
                   </picture>
                   <p class="fs-1 reviews-rating__estimation">4.9</p>
-                  <div class="u-rating reviews-rating__rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
+                  <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
                   <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
                 </div>
               </div>
-              <div class="js-reviews-slider-mobile-init reviews__list swiper">
+              <div class="js-reviews-slider-mobile-init swiper reviews__list">
                 <div class="swiper-wrapper">
-                  <div class="swiper-slide swiper-slide-hidden">
-                    <div class="reviews__list-card reviews-rating reviews-rating--theme-accent">
+                  <div class="swiper-slide-hidden swiper-slide">
+                    <div class="reviews-rating reviews-rating--theme-accent reviews__list-card">
                       <div class="reviews-rating__inner">
                         <picture class="reviews-rating__logo">
                           <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
                         </picture>
                         <p class="fs-1 reviews-rating__estimation">4.9</p>
-                        <div class="u-rating reviews-rating__rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
+                        <div class="u-rating u-rating--theme-white reviews-rating__rating" style="--rating-progress: 4.9"></div>
                         <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
                       </div>
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="reviews__list-card reviews-card">
+                    <div class="reviews-card reviews__list-card">
                       <div class="reviews-card__inner">
                         <header class="reviews-card__header">
                           <div class="reviews-card__user">
-                            <p class="fs-4 title reviews-card__name">Елена</p>
+                            <p class="title fs-4 reviews-card__name">Елена</p>
                             <p class="reviews-card__position">Маркетолог</p>
                           </div>
                           <div class="reviews-card__info">
@@ -1021,11 +1075,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="reviews__list-card reviews-card">
+                    <div class="reviews-card reviews__list-card">
                       <div class="reviews-card__inner">
                         <header class="reviews-card__header">
                           <div class="reviews-card__user">
-                            <p class="fs-4 title reviews-card__name">Александр</p>
+                            <p class="title fs-4 reviews-card__name">Александр</p>
                             <p class="reviews-card__position">SEO-специалист</p>
                           </div>
                           <div class="reviews-card__info">
@@ -1042,11 +1096,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="reviews__list-card reviews-card">
+                    <div class="reviews-card reviews__list-card">
                       <div class="reviews-card__inner">
                         <header class="reviews-card__header">
                           <div class="reviews-card__user">
-                            <p class="fs-4 title reviews-card__name">Ольга</p>
+                            <p class="title fs-4 reviews-card__name">Ольга</p>
                             <p class="reviews-card__position">Студентка</p>
                           </div>
                           <div class="reviews-card__info">
@@ -1063,11 +1117,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="reviews__list-card reviews-card">
+                    <div class="reviews-card reviews__list-card">
                       <div class="reviews-card__inner">
                         <header class="reviews-card__header">
                           <div class="reviews-card__user">
-                            <p class="fs-4 title reviews-card__name">Иван</p>
+                            <p class="title fs-4 reviews-card__name">Иван</p>
                             <p class="reviews-card__position">Копирайтер</p>
                           </div>
                           <div class="reviews-card__info">
@@ -1084,11 +1138,11 @@
                     </div>
                   </div>
                   <div class="swiper-slide">
-                    <div class="reviews__list-card reviews-card">
+                    <div class="reviews-card reviews__list-card">
                       <div class="reviews-card__inner">
                         <header class="reviews-card__header">
                           <div class="reviews-card__user">
-                            <p class="fs-4 title reviews-card__name">Наталья</p>
+                            <p class="title fs-4 reviews-card__name">Наталья</p>
                             <p class="reviews-card__position">Предприниматель</p>
                           </div>
                           <div class="reviews-card__info">
@@ -1106,15 +1160,15 @@
                   </div>
                 </div>
               </div>
-              <div class="d-sm-block reviews__slider-control slider-control">
+              <div class="d-sm-block slider-control reviews__slider-control">
                 <div class="slider-control__inner">
-                  <button type="button" class="slider-control__btn swiper-button swiper-button--size-sm swiper-button--theme-accent js-swiper-button-prev-1 swiper-button-prev">
+                  <button type="button" class="js-swiper-button-prev-1 swiper-button swiper-button-prev swiper-button--theme-accent swiper-button--size-sm slider-control__btn">
                     prev
                     <svg class="u-icon">
                       <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
                     </svg>
                   </button>
-                  <button type="button" class="slider-control__btn swiper-button swiper-button--size-sm swiper-button--theme-accent js-swiper-button-next-1 swiper-button-next">
+                  <button type="button" class="js-swiper-button-next-1 swiper-button swiper-button-next swiper-button--theme-accent swiper-button--size-sm slider-control__btn">
                     next
                     <svg class="u-icon">
                       <use xlink:href="images/icons/icons.svg#arrow-type-2"></use>
@@ -1124,15 +1178,15 @@
               </div>
             </div>
           </section>
-          
-          
+          <!-- reviews END -->
+          <!-- faq BEGIN -->
           <section id="faq" class="faq">
             <div class="container container--size-md faq__container">
               <h2 class="fs-1 faq__title">Вы часто спрашиваете&nbsp;нас</h2>
               <div itemscope itemtype="https://schema.org/FAQPage" class="faq__list">
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Что такое Нейросеть и&nbsp;как&nbsp;она&nbsp;работает?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1151,7 +1205,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Нужно ли использовать VPN для доступа к&nbsp;Нейросети?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1170,7 +1224,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Можно ли оплатить услуги Нейросети картой РФ?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1189,7 +1243,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Какую информацию может генерировать Нейросеть?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1208,7 +1262,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Как быстро Нейросеть обрабатывает запросы?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1227,7 +1281,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Какие данные требуется предоставить для начала использования?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1246,7 +1300,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Есть ли ограничения на использование Нейросети?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1265,7 +1319,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">Какую пользу я могу получить от использования Нейросети?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1284,7 +1338,7 @@
                 </article>
                 <article class="faq-card faq-card--theme-grey faq__list-card" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
                   <div class="faq-card__header">
-                    <button type="button" class="faq-card__btn js-faq-card-toggle">
+                    <button type="button" class="js-faq-card-toggle faq-card__btn">
                       <h3 itemprop="name" class="fs-4 faq-card__title">С чем работает нейросеть EVA&nbsp;AI?</h3>
                     </button>
                     <div class="faq-card__icon">
@@ -1304,723 +1358,17 @@
               </div>
             </div>
           </section>
-          
+          <!-- faq END -->
         </main>
-        
-        <footer class="footer site__footer">
-  <div class="container container--size-md footer__container">
-    <div class="row footer__row">
-      <div class="row__col footer__row-col footer__row-col--logo">
-        <a href="/" class="logo logo--size-sm footer__logo">
-          <picture class="logo__img">
-            <img src="images/logo-type-2.svg" width="144" height="38" alt="Eva AI">
-          </picture>
-        </a>
+        <!-- footer BEGIN -->
+        @@include('html/components/footer.html', {
+          'el': 'site__footer'
+        })
+        <!-- footer END -->
       </div>
-      <div class="row__col footer__row-col footer__row-col--nav">
-        <nav class="footer__nav" role="navigation">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <p class="footer__nav-title">Сайт</p>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#about" class="footer__nav-link js-anchor">Возможности</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#target-audience" class="footer__nav-link js-anchor">Для кого</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#reviews" class="footer__nav-link js-anchor">Отзывы</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="#faq" class="footer__nav-link js-anchor">FAQ</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="row__col footer__row-col footer__row-col--nav">
-        <nav class="footer__nav" role="navigation">
-          <ul class="footer__nav-list">
-            <li class="footer__nav-item">
-              <p class="footer__nav-title">Помощь</p>
-            </li>
-            <li class="footer__nav-item">
-              <a href="contacts.html" class="footer__nav-link">Контакты</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="privacy.html" class="footer__nav-link">Политика конфиденциальности</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="terms.html" class="footer__nav-link">Условия использования</a>
-            </li>
-            <li class="footer__nav-item">
-              <a href="offer.html" class="footer__nav-link">Договор оферты</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="row__col footer__row-col footer__row-col--copyright">
-        <p class="footer__copyright">© 2024 EVa AI.&nbsp;<br class="d-md-none">Все права защищены</p>
-      </div>
-    </div>
-  </div>
-</footer>
-        
-      </div>
-      <div class="u-scrollbar popup" data-popup="popup-login" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner login-block">
-        <picture class="login-block__bg">
-          <source srcset="images/login-block-bg.webp" type="image/webp">
-          <img src="images/login-block-bg.jpg" alt="Войдите в свой аккаунт" width="1200" height="583">
-        </picture>
-        <div class="login-block__row">
-          <div class="login-block__col login-block__col--content">
-            <div class="login-block__content">
-              <div class="reviews-rating login-block__rating reviews-rating--theme-accent-blur">
-                <div class="reviews-rating__inner">
-                  <picture class="reviews-rating__logo">
-                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
-                  </picture>
-                  <p class="fs-1 reviews-rating__estimation">4.9</p>
-                  <div class="u-rating reviews-rating__rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
-                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
-                </div>
-              </div>
-              <div class="login-block__benefits">
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#picture"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Генерируйте изображения</h3>
-                  </div>
-                </div>
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#text"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Создавайте уникальный контент</h3>
-                  </div>
-                </div>
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#question-mark"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Задавайте вопросы</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="login-block__col login-block__col--form">
-            <p class="title fs-2 login-block__title">Войдите в&nbsp;свой аккаунт</p>
-            <p class="login-block__subtitle">Пользуйтесь возможностями нашего ИИ</p>
-            <form action="#" class="login-block__form">
-              <div class="u-input login-block__form-input">
-                <label class="u-input__label">
-                  <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com">
-                </label>
-              </div>
-              <div class="u-input login-block__form-input">
-                <label class="u-input__label">
-                  <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль">
-                </label>
-              </div>
-              <div class="login-block__form-footer">
-                <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
-                  <span class="btn__inner">
-                    <span class="btn__title">Войти</span>
-                  </span>
-                </button>
-                <div class="login-block__form-footer-aside">
-                  <button type="button" data-modal="popup-forgot" class="router-btn router-btn--theme-accent login-block__form-footer-aside-forgot">Забыли пароль? ></button>
-                </div>
-              </div>
-            </form>
-            <div class="login-block__privacy u-privacy">
-              <p>Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
-            </div>
-            <div class="login-block__sc-auth sc-auth">
-              <p class="fs-4 title sc-auth__title">Вход через соц сети:</p>
-              <ul class="sc-auth__list">
-                <li class="sc-auth__list-item">
-                  <button type="button" class="sc-auth__list-btn">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#yandex-color"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="sc-auth__list-item">
-                  <button type="button" class="sc-auth__list-btn">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#vk-color"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="sc-auth__list-item">
-                  <button type="button" class="sc-auth__list-btn">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#google-color"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div class="login-block__router">
-              <p class="login-block__router-title">Нет аккаунта?</p>
-              <button type="button" data-modal="popup-registration" class="router-btn router-btn--theme-accent login-block__router-btn">Зарегистрироваться ></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-registration" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner login-block">
-        <picture class="login-block__bg">
-          <source srcset="images/login-block-bg.webp" type="image/webp">
-          <img src="images/login-block-bg.jpg" alt="Попробуйте чат" width="1200" height="583">
-        </picture>
-        <div class="login-block__row">
-          <div class="login-block__col login-block__col--content">
-            <div class="login-block__content">
-              <div class="reviews-rating login-block__rating reviews-rating--theme-accent-blur">
-                <div class="reviews-rating__inner">
-                  <picture class="reviews-rating__logo">
-                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
-                  </picture>
-                  <p class="fs-1 reviews-rating__estimation">4.9</p>
-                  <div class="u-rating reviews-rating__rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
-                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
-                </div>
-              </div>
-              <div class="login-block__benefits">
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#picture"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Генерируйте изображения</h3>
-                  </div>
-                </div>
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#text"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Создавайте уникальный контент</h3>
-                  </div>
-                </div>
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#question-mark"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Задавайте вопросы</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="login-block__col login-block__col--form">
-            <p class="title fs-2 login-block__title">Попробуйте чат</p>
-            <p class="login-block__subtitle">Просто пройдите короткую регистрацию</p>
-            <form action="#" class="login-block__form">
-              <div class="u-input login-block__form-input">
-                <label class="u-input__label">
-                  <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com">
-                </label>
-              </div>
-              <div class="u-input login-block__form-input">
-                <label class="u-input__label">
-                  <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Пароль">
-                </label>
-              </div>
-              <div class="login-block__form-footer">
-                <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
-                  <span class="btn__inner">
-                    <span class="btn__title">Отправить</span>
-                  </span>
-                </button>
-              </div>
-            </form>
-            <div class="login-block__privacy u-privacy">
-              <p>Нажимая на кнопку, вы соглашаетесь с&nbsp;нашими <a href="terms.html" target="_blank">Условиями использования</a> и&nbsp;<a href="privacy.html" target="_blank">Политикой конфиденциальности</a></p>
-            </div>
-            <div class="login-block__sc-auth sc-auth">
-              <p class="fs-4 title sc-auth__title">Регистрация через соц сети:</p>
-              <ul class="sc-auth__list">
-                <li class="sc-auth__list-item">
-                  <button type="button" class="sc-auth__list-btn">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#yandex-color"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="sc-auth__list-item">
-                  <button type="button" class="sc-auth__list-btn">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#vk-color"></use>
-                    </svg>
-                  </button>
-                </li>
-                <li class="sc-auth__list-item">
-                  <button type="button" class="sc-auth__list-btn">
-                    <svg class="u-icon">
-                      <use xlink:href="images/icons/icons.svg#google-color"></use>
-                    </svg>
-                  </button>
-                </li>
-              </ul>
-            </div>
-            <div class="login-block__router">
-              <p class="login-block__router-title">Уже есть аккаунт?</p>
-              <button type="button" data-modal="popup-login" class="router-btn router-btn--theme-accent login-block__router-btn">Войти ></button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-forgot" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-lg popup__content--theme-transparent">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner login-block">
-        <picture class="login-block__bg">
-          <source srcset="images/login-block-bg.webp" type="image/webp">
-          <img src="images/login-block-bg.jpg" alt="Восстановление пароля" width="1200" height="583">
-        </picture>
-        <div class="login-block__row">
-          <div class="login-block__col login-block__col--content">
-            <div class="login-block__content">
-              <div class="reviews-rating login-block__rating reviews-rating--theme-accent-blur">
-                <div class="reviews-rating__inner">
-                  <picture class="reviews-rating__logo">
-                    <img src="images/logo-type-3.svg" width="144" height="38" alt="Eva AI">
-                  </picture>
-                  <p class="fs-1 reviews-rating__estimation">4.9</p>
-                  <div class="u-rating reviews-rating__rating u-rating--theme-white" style="--rating-progress: 4.9"></div>
-                  <p class="reviews-rating__description">Средняя оценка тысяч пользователей</p>
-                </div>
-              </div>
-              <div class="login-block__benefits">
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#picture"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Генерируйте изображения</h3>
-                  </div>
-                </div>
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#text"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Создавайте уникальный контент</h3>
-                  </div>
-                </div>
-                <div class="info-header login-block__benefits-item">
-                  <div class="info-header__inner">
-                    <div class="info-header__media">
-                      <div class="info-header__icon">
-                        <svg class="u-icon">
-                          <use xlink:href="images/icons/icons.svg#question-mark"></use>
-                        </svg>
-                      </div>
-                    </div>
-                    <h3 class="info-header__title fs-5">Задавайте вопросы</h3>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="login-block__col login-block__col--form">
-            <p class="title fs-2 login-block__title">Восстановление пароля</p>
-            <p class="login-block__subtitle is-forgot">Введите адрес электронной почты, который вы использовали при регистрации, и&nbsp;мы вышлем вам ссылку для сброса пароля</p>
-            <form action="#" class="login-block__form">
-              <div class="u-input login-block__form-input">
-                <label class="u-input__label">
-                  <input type="email" name="email" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="mail@example.com">
-                </label>
-              </div>
-              <div class="login-block__form-footer">
-                <button type="submit" class="btn btn--size-md btn--theme-accent-fill login-block__form-footer-btn">
-                  <span class="btn__inner">
-                    <span class="btn__title">Отправить</span>
-                  </span>
-                </button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-chat-download-ask" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__chat-form-wrapper">
-          <header class="popup__chat-form-header">
-            <p class="title fs-3 popup__chat-form-title">Загрузи и спроси</p>
-            <p class="popup__chat-form-subtitle">Задайте любой вопрос по&nbsp;документу</p>
-          </header>
-          <form action="#" class="popup__chat-form">
-            <div class="popup__chat-form-upload-file upload-file">
-              <input type="file" name="attach-file-article" id="attach-file-article" class="upload-file__control" value="">
-              <div class="upload-file__inner">
-                <label for="attach-file-article" class="upload-file__label">
-                  <span class="upload-file__body">
-                    <span class="upload-file__picture">
-                      <svg class="u-icon">
-                        <use xlink:href="images/icons/icons.svg#upload-file"></use>
-                      </svg>
-                    </span>
-                    <span class="d-lg-none upload-file__title">Перетащите файл сюда</span>
-                    <span class="upload-file__title color-accent">Выбрать файл</span>
-                  </span>
-                </label>
-              </div>
-              <div class="upload-file__limitation">
-                <p class="upload-file__limitation-text">Поддерживаемые форматы: <strong>PDF, DOC, XLSX</strong></p>
-                <p class="upload-file__limitation-text">Макс. размер файла: <strong>20mb</strong></p>
-              </div>
-            </div>
-            <div class="u-input popup__chat-form-message">
-              <label class="u-input__label">
-                <textarea name="message" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea u-scrollbar" required style="min-height: 124rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
-              </label>
-            </div>
-            <footer class="popup__chat-form-footer">
-              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                <span class="btn__inner">
-                  <span class="btn__title">Спросить</span>
-                </span>
-              </button>
-            </footer>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-chat-link-ask" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__chat-form-wrapper">
-          <header class="popup__chat-form-header">
-            <svg class="u-icon popup__chat-form-header-icon">
-              <use xlink:href="images/icons/icons.svg#attach"></use>
-            </svg>
-            <p class="title fs-3 popup__chat-form-title">Вставь ссылку и спроси</p>
-            <p class="popup__chat-form-subtitle">Спросите или найдите что&nbsp;угодно на&nbsp;сайте</p>
-          </header>
-          <form action="#" class="popup__chat-form">
-            <div class="u-input popup__chat-form-input">
-              <label class="u-input__label">
-                <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на сайт">
-              </label>
-            </div>
-            <div class="u-input popup__chat-form-message">
-              <label class="u-input__label">
-                <textarea name="message" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea u-scrollbar" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
-              </label>
-            </div>
-            <footer class="popup__chat-form-footer">
-              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                <span class="btn__inner">
-                  <span class="btn__title">Спросить</span>
-                </span>
-              </button>
-            </footer>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-chat-youtube-ask" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__chat-form-wrapper">
-          <header class="popup__chat-form-header">
-            <svg class="u-icon popup__chat-form-header-icon">
-              <use xlink:href="images/icons/icons.svg#youtube-color"></use>
-            </svg>
-            <p class="title fs-3 popup__chat-form-title">YouTube и спроси</p>
-            <p class="popup__chat-form-subtitle">Спросите что угодно о&nbsp;видео с YouTube</p>
-          </header>
-          <form action="#" class="popup__chat-form">
-            <div class="u-input popup__chat-form-input">
-              <label class="u-input__label">
-                <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на видео с YouTube">
-              </label>
-            </div>
-            <div class="u-input popup__chat-form-message">
-              <label class="u-input__label">
-                <textarea name="message" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-textarea u-scrollbar" required style="min-height: 96rem;" placeholder="Введите ваш вопрос здесь..."></textarea>
-              </label>
-            </div>
-            <footer class="popup__chat-form-footer">
-              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                <span class="btn__inner">
-                  <span class="btn__title">Спросить</span>
-                </span>
-              </button>
-            </footer>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-chat-youtube" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__chat-form-wrapper">
-          <header class="popup__chat-form-header">
-            <svg class="u-icon popup__chat-form-header-icon">
-              <use xlink:href="images/icons/icons.svg#youtube-color"></use>
-            </svg>
-            <p class="title fs-3 popup__chat-form-title">Краткое содержание YouTube-видео</p>
-            <p class="popup__chat-form-subtitle">Получите детальную выжимку из&nbsp;видео с&nbsp;YouTube</p>
-          </header>
-          <form action="#" class="popup__chat-form">
-            <div class="u-input popup__chat-form-input">
-              <label class="u-input__label">
-                <input type="text" name="name" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline" required placeholder="Вставьте ссылку на видео с YouTube">
-              </label>
-            </div>
-            <footer class="popup__chat-form-footer">
-              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                <span class="btn__inner">
-                  <span class="btn__title">Отправить</span>
-                </span>
-              </button>
-            </footer>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-chat-article" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__chat-form-wrapper">
-          <header class="popup__chat-form-header">
-            <p class="title fs-3 popup__chat-form-title">Краткое содержание статьи</p>
-            <p class="popup__chat-form-subtitle">Получите детальную выжимку из&nbsp;статьи</p>
-          </header>
-          <form action="#" class="popup__chat-form">
-            <div class="popup__chat-form-upload-file upload-file">
-              <input type="file" name="attach-file" id="attach-file" class="upload-file__control" value="">
-              <div class="upload-file__inner">
-                <label for="attach-file" class="upload-file__label">
-                  <span class="upload-file__body">
-                    <span class="upload-file__picture">
-                      <svg class="u-icon">
-                        <use xlink:href="images/icons/icons.svg#upload-file"></use>
-                      </svg>
-                    </span>
-                    <span class="d-lg-none upload-file__title">Перетащите файл сюда</span>
-                    <span class="upload-file__title color-accent">Выбрать файл</span>
-                  </span>
-                </label>
-              </div>
-              <div class="upload-file__limitation">
-                <p class="upload-file__limitation-text">Поддерживаемые форматы: <strong>PDF, DOC, XLSX</strong></p>
-                <p class="upload-file__limitation-text">Макс. размер файла: <strong>20mb</strong></p>
-              </div>
-            </div>
-            <footer class="popup__chat-form-footer">
-              <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__chat-form-btn" disabled="disabled">
-                <span class="btn__inner">
-                  <span class="btn__title">Отправить</span>
-                </span>
-              </button>
-            </footer>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-change-password" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__form-wrapper">
-          <p class="title fs-3 popup__form-title">Изменение пароля</p>
-          <form action="#" class="popup__form">
-            <div class="u-input popup__form-input">
-              <label class="u-input__label">
-                <input type="password" name="password" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Введите старый пароль">
-              </label>
-            </div>
-            <div class="u-input popup__form-input">
-              <label class="u-input__label">
-                <input type="password" name="password_new" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Введите новый пароль">
-              </label>
-            </div>
-            <div class="u-input popup__form-input">
-              <label class="u-input__label">
-                <input type="password" name="password_new_repeat" class="u-input__el u-input__el--size-md u-input__el--theme-grey-outline u-input__el--type-text" required placeholder="Повторно введите новый пароль">
-              </label>
-            </div>
-            <footer class="btn-group popup__form-footer">
-              <div class="btn-group__inner">
-                <div class="btn-group__col">
-                  <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-btn" disabled="disabled">
-                    <span class="btn__inner">
-                      <span class="btn__title">Сменить пароль</span>
-                    </span>
-                  </button>
-                </div>
-              </div>
-            </footer>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<div class="u-scrollbar popup" data-popup="popup-cancel-subscription" data-close-overlay>
-  <div class="popup__wrapper" data-close-overlay>
-    <div class="popup__content popup__content--size-sm popup__content--theme-dark">
-      <button type="button" class="js-button-close popup__btn-close">
-        <svg class="u-icon btn-close__icon">
-          <use xlink:href="images/icons/icons.svg#close"></use>
-        </svg>
-      </button>
-      <div class="popup__inner">
-        <div class="popup__form-wrapper">
-          <p class="title fs-3 popup__form-title">Вы уверены, что хотите отменить&nbsp;подписку?</p>
-          <footer class="btn-group popup__form-footer">
-            <div class="btn-group__inner">
-              <div class="btn-group__col">
-                <button type="submit" class="btn btn--size-md btn--theme-accent-outline popup__form-btn-remove">
-                  <span class="btn__inner">
-                    <span class="btn__title">Да, отменить</span>
-                  </span>
-                </button>
-              </div>
-              <div class="btn-group__col">
-                <button type="submit" class="btn btn--size-md btn--theme-accent-fill popup__form-btn-cancel">
-                  <span class="btn__inner">
-                    <span class="btn__title">Нет, не отменять</span>
-                  </span>
-                </button>
-              </div>
-            </div>
-          </footer>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+      @@include('html/modal.html')
     </div>
 
-    <script src="js/app.min.js??=v=20240913183654"></script>
+    @@include('html/script.html')
   </body>
 </html>
